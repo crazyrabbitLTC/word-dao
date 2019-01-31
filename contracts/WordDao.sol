@@ -1,9 +1,9 @@
 pragma solidity 0.4.24;
 
 import "zos-lib/contracts/Initializable.sol";
-import "openzeppelin-eth/contracts/ERC20Mintable.sol";
+import "openzeppelin-eth/contracts/ERC20.sol";
 
-contract WordDao is Initializable{
+contract WordDao is ERC20, Initializable{
     
     mapping (uint256 => string) internal _numberByWords;
     mapping (string => uint256) internal _wordByNumber;
@@ -25,6 +25,7 @@ contract WordDao is Initializable{
         _numberByWords[_totalWords] = word;
         _wordByNumber[word] = _totalWords;
         emit wordAdded(msg.sender, word);
+        _mint(msg.sender, 1);
     }
     
     function getWordNumber(string memory word) public view returns(uint256){
@@ -58,4 +59,5 @@ contract WordDao is Initializable{
         }
         return string(bLower);
     }
+    
 }
