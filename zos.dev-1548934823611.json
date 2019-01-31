@@ -109,22 +109,22 @@
       {
         "address": "0xd4d30a74260b945299051b45348c722e4a04305c",
         "version": "0.1.0",
-        "implementation": "0x21e796140b933568e41db505498f0f2cea3fd519"
+        "implementation": "0x05a120f8fd158a9c8a438d2b730c5716946d26a1"
       },
       {
         "address": "0x8df48738647d66b69c9b8fb6f63d9cf05ee41198",
         "version": "0.1.0",
-        "implementation": "0x931f95859f5980eb84252c64020fc1d67a1c0ed9"
+        "implementation": "0x05a120f8fd158a9c8a438d2b730c5716946d26a1"
       },
       {
         "address": "0x208d0483382d0c02dfbe0d168f315c23ee254db7",
         "version": "0.1.0",
-        "implementation": "0x36c808bb10d4aee562e92ec67740adb521ca16ad"
+        "implementation": "0x05a120f8fd158a9c8a438d2b730c5716946d26a1"
       },
       {
         "address": "0x759615e21008948e4c67932a60c1ebecec5c9b2c",
         "version": "0.1.0",
-        "implementation": "0x36c808bb10d4aee562e92ec67740adb521ca16ad"
+        "implementation": "0x05a120f8fd158a9c8a438d2b730c5716946d26a1"
       }
     ]
   },

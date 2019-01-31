@@ -1,6 +1,7 @@
 pragma solidity 0.4.24;
 
 import "zos-lib/contracts/Initializable.sol";
+import "openzeppelin-eth/contracts/ERC20Mintable.sol";
 
 contract WordDao is Initializable{
     
