@@ -3,6 +3,10 @@
 # Edit at https://www.gitignore.io/?templates=node
 
 ### Node ###
+
+# Secrets
+secrets.js
+
 # Logs
 logs
 *.log
