@@ -1,16 +1,16 @@
-pragma solidity ^0.4.24;
+pragma solidity >=0.4.24 <0.6.0;
 
-contract wordDao {
+contract WordDao {
     
     mapping (uint256 => string) internal _numberByWords;
     mapping (string => uint256) internal _wordByNumber;
     uint internal _totalWords;
 
-    function initizalize() {
+    function initizalize() public {
         _totalWords = 0;
     }
 
-    function setWord(string word) public payable{
+    function setWord(string memory word) public payable{
     require(msg.value == 1 ether);
     
         word = _toLower(word);
@@ -21,12 +21,12 @@ contract wordDao {
         _wordByNumber[word] = _totalWords;
     }
     
-    function getWordNumber(string word) public view returns(uint256){
+    function getWordNumber(string memory word) public view returns(uint256){
         uint256 returnword= _wordByNumber[word];
         return returnword;
     }
     
-    function getNumberWord(uint wordNumber) public view returns (string){
+    function getNumberWord(uint wordNumber) public view returns (string memory){
         return _numberByWords[wordNumber];
     }
     
@@ -38,7 +38,7 @@ contract wordDao {
         return address(this).balance;
     }
     
-    function _toLower(string str) internal returns (string) {
+    function _toLower(string memory str) internal returns (string memory) {
         bytes memory bStr = bytes(str);
         bytes memory bLower = new bytes(bStr.length);
         for (uint i = 0; i < bStr.length; i++) {
