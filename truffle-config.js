@@ -36,7 +36,7 @@ module.exports = {
       },
       gas: 5000000,
       gasPrice: 5e9,
-      network_id: 3
+      network_id: 4
     }
   },
   compilers: {

@@ -8674,6 +8674,12 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "links": {},
+      "events": {},
+      "address": "0xe4a4a65ba86f3f80821da83df135041940d73da5",
+      "updated_at": 1548949035710
+    },
     "1548934823611": {
       "links": {},
       "events": {},
