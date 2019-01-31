@@ -8,6 +8,8 @@ contract WordDao is Initializable{
     mapping (string => uint256) internal _wordByNumber;
     uint internal _totalWords;
 
+    event wordAdded(address _adder, string word);
+
     function initialize() initializer public {
         _totalWords = 0;
     }
@@ -21,6 +23,7 @@ contract WordDao is Initializable{
         _totalWords = _totalWords + 1;
         _numberByWords[_totalWords] = word;
         _wordByNumber[word] = _totalWords;
+        emit wordAdded(msg.sender, word);
     }
     
     function getWordNumber(string memory word) public view returns(uint256){
