@@ -1,12 +1,14 @@
-pragma solidity >=0.4.24 <0.6.0;
+pragma solidity 0.4.24;
 
-contract WordDao {
+import "zos-lib/contracts/Initializable.sol";
+
+contract WordDao is Initializable{
     
     mapping (uint256 => string) internal _numberByWords;
     mapping (string => uint256) internal _wordByNumber;
     uint internal _totalWords;
 
-    function initizalize() public {
+    function initizalize() initializer public {
         _totalWords = 0;
     }
 
