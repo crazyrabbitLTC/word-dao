@@ -13,7 +13,7 @@ contract WordDao is Initializable{
     }
 
     function setWord(string memory word) public payable{
-    require(msg.value == 1 ether);
+    //require(msg.value == 1 ether);
     
         word = _toLower(word);
         require(_wordByNumber[word] == 0);
