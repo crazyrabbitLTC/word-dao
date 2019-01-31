@@ -8,7 +8,7 @@ contract WordDao is Initializable{
     mapping (string => uint256) internal _wordByNumber;
     uint internal _totalWords;
 
-    function initizalize() initializer public {
+    function initialize() initializer public {
         _totalWords = 0;
     }
 
