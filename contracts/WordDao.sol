@@ -1,7 +1,7 @@
-pragma solidity 0.4.24;
+pragma solidity >=0.4.24 <0.6.0;
 
 import "zos-lib/contracts/Initializable.sol";
-import "openzeppelin-eth/contracts/ERC20.sol";
+import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
 
 contract WordDao is ERC20, Initializable{
     
@@ -18,7 +18,7 @@ contract WordDao is ERC20, Initializable{
     function setWord(string memory word) public payable{
     //require(msg.value == 1 ether);
     
-        word = _toLower(word);
+        //word = _toLower(word);
         require(_wordByNumber[word] == 0);
         
         _totalWords = _totalWords + 1;
@@ -45,19 +45,19 @@ contract WordDao is ERC20, Initializable{
         return address(this).balance;
     }
     
-    function _toLower(string memory str) internal returns (string memory) {
-        bytes memory bStr = bytes(str);
-        bytes memory bLower = new bytes(bStr.length);
-        for (uint i = 0; i < bStr.length; i++) {
-            // Uppercase character...
-            if ((bStr[i] >= 65) && (bStr[i] <= 90)) {
-                // So we add 32 to make it lowercase
-                bLower[i] = bytes1(int(bStr[i]) + 32);
-            } else {
-                bLower[i] = bStr[i];
-            }
-        }
-        return string(bLower);
-    }
+    // function _toLower(string memory str) internal returns (string memory) {
+    //     bytes memory bStr = bytes(str);
+    //     bytes memory bLower = new bytes(bStr.length);
+    //     for (uint i = 0; i < bStr.length; i++) {
+    //         // Uppercase character...
+    //         if ((bStr[i] >= 65) && (bStr[i] <= 90)) {
+    //             // So we add 32 to make it lowercase
+    //             bLower[i] = bytes1(int(bStr[i]) + 32);
+    //         } else {
+    //             bLower[i] = bStr[i];
+    //         }
+    //     }
+    //     return string(bLower);
+    // }
     
 }
