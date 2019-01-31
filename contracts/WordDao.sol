@@ -1,9 +1,12 @@
 pragma solidity >=0.4.24 <0.6.0;
 
 import "zos-lib/contracts/Initializable.sol";
-import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-eth/contracts/token/ERC20//ERC20Detailed.sol";
+import "openzeppelin-eth/contracts/token/ERC20//ERC20Mintable.sol";
+import "openzeppelin-eth/contracts/token/ERC20//ERC20Pausable.sol";
+//import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
 
-contract WordDao is Initializable, ERC20 {
+contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
     
     mapping (uint256 => string) internal _numberByWords;
     mapping (string => uint256) internal _wordByNumber;
