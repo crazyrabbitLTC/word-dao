@@ -4,5 +4,8 @@
   "version": "0.1.0",
   "contracts": {
     "WordDao": "WordDao"
+  },
+  "dependencies": {
+    "openzeppelin-eth": "^2.1.3"
   }
 }
