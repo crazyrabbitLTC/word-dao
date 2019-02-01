@@ -260,6 +260,11 @@
         "address": "0xd511eb8b67ad7345cbeab74b2b5e85b4a1b5b2ec",
         "version": "0.1.0",
         "implementation": "0x3c5279e56c2f6e459184b896644a7284e104e034"
+      },
+      {
+        "address": "0x668ed5739b8db36e7037e99034d953dfba5ce126",
+        "version": "0.1.0",
+        "implementation": "0x3c5279e56c2f6e459184b896644a7284e104e034"
       }
     ]
   },
