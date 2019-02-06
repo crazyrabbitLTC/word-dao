@@ -98,6 +98,10 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
     function getBalance() public view returns(uint256){
         return address(this).balance;
     }
+
+    function getTotalRequests() public view returns(uint256){
+        return _totalRequests;
+    }
     
     // function _toLower(string memory str) internal returns (string memory) {
     //     bytes memory bStr = bytes(str);
