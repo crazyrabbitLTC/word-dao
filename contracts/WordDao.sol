@@ -11,6 +11,7 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
     mapping (uint256 => string) internal _numberByWords;
     mapping (string => uint256) internal _wordByNumber;
     uint internal _totalWords;
+    uint internal _totalRequests;
 
     event wordAdded(address _adder, string word);
 
@@ -81,10 +82,12 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
     
     function getWordNumber(string memory word) public view returns(uint256){
         uint256 returnword= _wordByNumber[word];
+        _totalRequests = _totalRequests + 1;
         return returnword;
     }
     
     function getNumberWord(uint wordNumber) public view returns (string memory){
+        _totalRequests = _totalRequests + 1;
         return _numberByWords[wordNumber];
     }
     
