@@ -80,13 +80,13 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
         _mint(msg.sender, 1);
     }
     
-    function getWordNumber(string memory word) public external returns(uint256){
+    function getWordNumber(string memory word) external returns(uint256){
         uint256 returnword= _wordByNumber[word];
         _totalRequests = _totalRequests + 1;
         return returnword;
     }
     
-    function getNumberWord(uint wordNumber) public external returns (string memory){
+    function getNumberWord(uint wordNumber) external returns (string memory){
         _totalRequests = _totalRequests + 1;
         return _numberByWords[wordNumber];
     }
