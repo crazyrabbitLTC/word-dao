@@ -5,13 +5,14 @@ import "zos-lib/contracts/Initializable.sol";
 contract MultisigExecute {
     uint256 public nonce;     // (only) mutable state
     address[] public owners;  // immutable state
+    address public wordDao;
 
-    function initialize(address[] owners_) public initializer{
+    function initialize(address[] owners_, address _wordDao) public initializer{
         owners = owners_;
+        wordDao = _wordDao;
     }
 
     function execute(
-        address destination,
         uint256 value,
         bytes data,
         bytes32[] sigR,
@@ -21,7 +22,7 @@ contract MultisigExecute {
         external
     {
         bytes32 hash = prefixed(keccak256(abi.encodePacked(
-            address(this), destination, value, data, nonce
+            address(this), wordDao, value, data, nonce
         )));
 
         for (uint256 i = 0; i < owners.length; i++) {
@@ -31,7 +32,7 @@ contract MultisigExecute {
 
         // If we make it here, all signatures are accounted for.
         nonce += 1;
-        require(destination.call.value(value)(data));
+        require(wordDao.call.value(value)(data));
     }
 
     function () payable {}
