@@ -96,8 +96,6 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
         return returnword;
     }
 
-    
-    
     function getNumberWord(uint wordNumber) external returns (string memory){
         _incrementCounter();
         return _numberByWords[wordNumber];

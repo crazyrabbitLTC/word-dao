@@ -1,11 +1,11 @@
 {
   "contracts": {
     "WordDao": {
-      "address": "0xadfae209f7267bd6d3fd7213ade7fafaae4cf791",
-      "constructorCode": "608060405234801561001057600080fd5b50613630806100206000396000f3fe",
-      "bodyBytecodeHash": "24e0f9c1b14cd1942e968514ef7d9c78286afcc5d22ce85264a48474dd3ceeea",
-      "localBytecodeHash": "8e16956214b762e65751b0259d2a9a95f35b1f0e3fbd079be27459e56d0a75d5",
-      "deployedBytecodeHash": "8e16956214b762e65751b0259d2a9a95f35b1f0e3fbd079be27459e56d0a75d5",
+      "address": "0x270c7e52c390976bf69fa33d650e3e84fdea7f27",
+      "constructorCode": "608060405234801561001057600080fd5b50613917806100206000396000f3fe",
+      "bodyBytecodeHash": "356355bf5f8892828bd2495f89bf3456cb30f74226aa3f775868fc76de1a64d8",
+      "localBytecodeHash": "08f927b59c709b110f74f34440a60e25404f2a50303d1556544521fbc911a2b8",
+      "deployedBytecodeHash": "08f927b59c709b110f74f34440a60e25404f2a50303d1556544521fbc911a2b8",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -47,7 +47,7 @@
           "members": [
             {
               "label": "bearer",
-              "astId": 346,
+              "astId": 380,
               "type": "t_mapping<t_bool>",
               "src": "150:32:1"
             }
@@ -71,7 +71,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initialized",
-          "astId": 1651,
+          "astId": 1685,
           "type": "t_bool",
           "src": "757:24:11"
         },
@@ -79,7 +79,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initializing",
-          "astId": 1653,
+          "astId": 1687,
           "type": "t_bool",
           "src": "876:25:11"
         },
@@ -87,7 +87,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "______gap",
-          "astId": 1702,
+          "astId": 1736,
           "type": "t_array:50<t_uint256>",
           "src": "1891:29:11"
         },
@@ -95,7 +95,7 @@
           "contract": "ERC20Detailed",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
           "label": "_name",
-          "astId": 910,
+          "astId": 944,
           "type": "t_string",
           "src": "382:20:6"
         },
@@ -103,7 +103,7 @@
           "contract": "ERC20Detailed",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
           "label": "_symbol",
-          "astId": 912,
+          "astId": 946,
           "type": "t_string",
           "src": "408:22:6"
         },
@@ -111,7 +111,7 @@
           "contract": "ERC20Detailed",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
           "label": "_decimals",
-          "astId": 914,
+          "astId": 948,
           "type": "t_uint8",
           "src": "436:23:6"
         },
@@ -119,7 +119,7 @@
           "contract": "ERC20Detailed",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
           "label": "______gap",
-          "astId": 966,
+          "astId": 1000,
           "type": "t_array:50<t_uint256>",
           "src": "1097:29:6"
         },
@@ -127,7 +127,7 @@
           "contract": "ERC20",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
           "label": "_balances",
-          "astId": 1155,
+          "astId": 1189,
           "type": "t_mapping<t_uint256>",
           "src": "774:46:9"
         },
@@ -135,7 +135,7 @@
           "contract": "ERC20",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
           "label": "_allowed",
-          "astId": 1161,
+          "astId": 1195,
           "type": "t_mapping<t_uint256>",
           "src": "827:66:9"
         },
@@ -143,7 +143,7 @@
           "contract": "ERC20",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
           "label": "_totalSupply",
-          "astId": 1163,
+          "astId": 1197,
           "type": "t_uint256",
           "src": "900:28:9"
         },
@@ -151,7 +151,7 @@
           "contract": "ERC20",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
           "label": "______gap",
-          "astId": 1577,
+          "astId": 1611,
           "type": "t_array:50<t_uint256>",
           "src": "7661:29:9"
         },
@@ -159,7 +159,7 @@
           "contract": "MinterRole",
           "path": "openzeppelin-eth/contracts/access/roles/MinterRole.sol",
           "label": "_minters",
-          "astId": 453,
+          "astId": 487,
           "type": "t_struct<Roles.Role>",
           "src": "271:27:2"
         },
@@ -167,7 +167,7 @@
           "contract": "MinterRole",
           "path": "openzeppelin-eth/contracts/access/roles/MinterRole.sol",
           "label": "______gap",
-          "astId": 552,
+          "astId": 586,
           "type": "t_array:50<t_uint256>",
           "src": "1081:29:2"
         },
@@ -175,7 +175,7 @@
           "contract": "ERC20Mintable",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Mintable.sol",
           "label": "______gap",
-          "astId": 1015,
+          "astId": 1049,
           "type": "t_array:50<t_uint256>",
           "src": "745:29:7"
         },
@@ -183,7 +183,7 @@
           "contract": "PauserRole",
           "path": "openzeppelin-eth/contracts/access/roles/PauserRole.sol",
           "label": "_pausers",
-          "astId": 572,
+          "astId": 606,
           "type": "t_struct<Roles.Role>",
           "src": "271:27:3"
         },
@@ -191,7 +191,7 @@
           "contract": "PauserRole",
           "path": "openzeppelin-eth/contracts/access/roles/PauserRole.sol",
           "label": "______gap",
-          "astId": 671,
+          "astId": 705,
           "type": "t_array:50<t_uint256>",
           "src": "1081:29:3"
         },
@@ -199,7 +199,7 @@
           "contract": "Pausable",
           "path": "openzeppelin-eth/contracts/lifecycle/Pausable.sol",
           "label": "_paused",
-          "astId": 690,
+          "astId": 724,
           "type": "t_bool",
           "src": "352:20:4"
         },
@@ -207,7 +207,7 @@
           "contract": "Pausable",
           "path": "openzeppelin-eth/contracts/lifecycle/Pausable.sol",
           "label": "______gap",
-          "astId": 771,
+          "astId": 805,
           "type": "t_array:50<t_uint256>",
           "src": "1429:29:4"
         },
@@ -215,7 +215,7 @@
           "contract": "ERC20Pausable",
           "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Pausable.sol",
           "label": "______gap",
-          "astId": 1138,
+          "astId": 1172,
           "type": "t_array:50<t_uint256>",
           "src": "1195:29:8"
         },
@@ -257,7 +257,26 @@
         "hasSelfDestruct": false,
         "hasDelegateCall": false,
         "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": []
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "MinterRole",
+            "path": "openzeppelin-eth/contracts/access/roles/MinterRole.sol",
+            "label": "_minters",
+            "astId": 487,
+            "type": "t_struct<Roles.Role>",
+            "src": "271:27:2"
+          },
+          {
+            "contract": "PauserRole",
+            "path": "openzeppelin-eth/contracts/access/roles/PauserRole.sol",
+            "label": "_pausers",
+            "astId": 606,
+            "type": "t_struct<Roles.Role>",
+            "src": "271:27:3"
+          }
+        ],
+        "storageDiff": []
       }
     }
   },
@@ -268,6 +287,16 @@
         "address": "0x34139d26ccd1e255f02f2503007b556b473f723b",
         "version": "0.1.0",
         "implementation": "0xadfae209f7267bd6d3fd7213ade7fafaae4cf791"
+      },
+      {
+        "address": "0x3df51278ae505923bfac36256d319f3329657787",
+        "version": "0.1.0",
+        "implementation": "0x270c7e52c390976bf69fa33d650e3e84fdea7f27"
+      },
+      {
+        "address": "0x9fc03fcfed3354a201abd0181b35401f0a1540eb",
+        "version": "0.1.0",
+        "implementation": "0x270c7e52c390976bf69fa33d650e3e84fdea7f27"
       }
     ]
   },
