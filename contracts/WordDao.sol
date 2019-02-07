@@ -132,6 +132,10 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
         return _totalRequests;
     }
     
+    function getWordFrequency(uint _word) public view returns(uint256){
+        //require word exists or just return zero? Some word may have never been requested but does not mean it doesn't exist....
+        return _requestFrequency[_word];
+    }
     // function _toLower(string memory str) internal returns (string memory) {
     //     bytes memory bStr = bytes(str);
     //     bytes memory bLower = new bytes(bStr.length);
