@@ -11,7 +11,7 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
     mapping (uint256 => string) internal _numberByWords;
     mapping (string => uint256) internal _wordByNumber;
     mapping (uint256 => uint256) internal _requestFrequency;
-    
+
     uint internal _totalWords;
     uint internal _totalRequests;
 
@@ -85,25 +85,37 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
     function _incrementCounter() internal {
         _totalRequests = _totalRequests + 1;
     }
+
+    function _incrementWordFrequency(uint _word) internal {
+        _requestFrequency[_word] = _requestFrequency[_word] + 1;
+    }
     
     function getWordNumber(string calldata word) external returns(uint256){
-        uint256 returnword= _wordByNumber[word];
+        //require word exists
+        uint256 returnword = _wordByNumber[word];
+        _incrementWordFrequency(returnword);
         _incrementCounter();
         return returnword;
     }
 
     function _public_getWordNumber(string memory word) public returns(uint256){
+        //require word exists
         uint256 returnword= _wordByNumber[word];
+        _incrementWordFrequency(returnword);
         _incrementCounter();
         return returnword;
     }
 
-    function getNumberWord(uint wordNumber) external returns (string memory){
+    function getNumberWord(uint _wordNumber) external returns (string memory){
+        //require that word exists
+        _incrementWordFrequency(_wordNumber);
         _incrementCounter();
-        return _numberByWords[wordNumber];
+        return _numberByWords[_wordNumber];
     }
 
     function _public_getNumberWord(uint wordNumber) public returns (string memory){
+        //require that word exists
+        _incrementWordFrequency(_wordNumber);
         _incrementCounter();
         return _numberByWords[wordNumber];
     }
