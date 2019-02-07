@@ -10,6 +10,8 @@ contract WordDao is Initializable, ERC20Detailed, ERC20Mintable, ERC20Pausable {
     
     mapping (uint256 => string) internal _numberByWords;
     mapping (string => uint256) internal _wordByNumber;
+    mapping (uint256 => uint256) internal _requestFrequency;
+    
     uint internal _totalWords;
     uint internal _totalRequests;
 
