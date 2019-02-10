@@ -3,7 +3,7 @@ const StorageBuilder = artifacts.require("StorageBuilder");
 
 contract('builder', (accounts)=> {
 
-    it("should have no languages", async () => {
+    it("Should have no languages at first deploy", async () => {
         const builderInstance = await StorageBuilder.deployed();
         //console.log("Builder Instance", builderInstance);
         const languageCount = await builderInstance.getStorageCount();
@@ -22,8 +22,32 @@ contract('builder', (accounts)=> {
         const languageCount = await builderInstance.getStorageCount();
         console.log("Languages: ", languageCount);
         assert.equal(languageCount, 1, "One Language set");
-
     })
+
+    it("Should deploy multiple languages", async () => {
+        const builderInstance = await StorageBuilder.deployed();
+        await builderInstance.deployStorage("English");
+        await builderInstance.deployStorage("Spanish");
+        const languageCount = await builderInstance.getStorageCount();
+        assert.equal(languageCount,3, "Three languages set");
+    })
+
+    it("Should return the language of the storage deployed", async () => {
+        const builderInstance = await StorageBuilder.deployed();
+        await builderInstance.deployStorage("English");
+        await builderInstance.deployStorage("Spanish");
+        const languageCount = await builderInstance.languages(2);
+        assert.equal(languageCount,"Spanish", "Correct language returned");
+    })
+
+    it("Should save the address of the deployed storage", async () => {
+        const builderInstance = await StorageBuilder.deployed();
+        const deployedStorageAddress = await builderInstance.deployStorage("German");
+        const numberOfLanguage = await builderInstance.getStorageCount();
+        console.log("Deployed address: ", deployedStorageAddress);
+        
+    })
+
 
 
 })
