@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "../Storage.sol";
+import "../contracts/Storage.sol";
 
 contract storageBuilder {
     
