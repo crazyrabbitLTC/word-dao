@@ -1,5 +1,6 @@
 
 const StorageBuilder = artifacts.require("StorageBuilder");
+const StorageContract = artifacts.require("Storage");
 
 contract('builder', (accounts)=> {
 

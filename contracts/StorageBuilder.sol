@@ -14,7 +14,7 @@ contract StorageBuilder {
     }
     
     function deployStorage(string calldata _language) external returns(address){
-        WordStorage c = new WordStorage(_language);
+        Storage c = new Storage(_language);
         languages.push(_language);
         storageLocations.push(address(c));
         emit storageCreated(address(c), _language);

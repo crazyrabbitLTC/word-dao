@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract WordStorage {
+contract Storage {
     
     //modifyer to check if Uint is valid
     //modifyer to check if Bytes32 is valid
