@@ -51,7 +51,17 @@ contract('builder', (accounts)=> {
         const addressInArray = await builderInstance.storageLocations(number-1);
         assert.equal(eventArgs._address, addressInArray, "The address deployed is the same");
         //console.log(deployedStorageAddress.logs[0].args);
+    })
 
+    it("Should Deploy a storage", async () => {
+        const builderInstance = await StorageBuilder.deployed();
+        const deployedStorageAddress = await builderInstance.deployStorage("German");
+        const numberOfLanguage = await builderInstance.getStorageCount();
+        const eventArgs = deployedStorageAddress.logs[0].args;
+        const number = numberOfLanguage.toNumber();
+        const storageContract = await StorageContract.at(eventArgs._address);
+        const storageName = await storageContract.language();
+        assert.equal(storageName, "German", "Storage language is not correct.");
     })
 
 
