@@ -64,6 +64,20 @@ contract('builder', (accounts)=> {
         assert.equal(storageName, "German", "Storage language is not correct.");
     })
 
+    it("Deployed storage should save a word", async () => {
+        const builderInstance = await StorageBuilder.deployed();
+        const deployedStorageAddress = await builderInstance.deployStorage("German");
+        const numberOfLanguage = await builderInstance.getStorageCount();
+        const eventArgs = deployedStorageAddress.logs[0].args;
+        const number = numberOfLanguage.toNumber();
+        const storageContract = await StorageContract.at(eventArgs._address);
+
+        await storageContract.setWord("love");
+        //const storageName = await storageContract.language();
+        const savedWord = await storageContract.getWordUint256ToString(0);
+        assert.equal(savedWord, "love", "Stored word is not correct.");
+    })
+
 
 
 })
