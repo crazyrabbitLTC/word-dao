@@ -133,11 +133,11 @@
       }
     },
     "storageBuilder": {
-      "address": "0x6ac35f97c649b163655579bd0df04126da61795b",
-      "constructorCode": "608060405234801561001057600080fd5b50610fd9806100206000396000f3fe",
-      "bodyBytecodeHash": "c2b2c935c81f6b67e69ad65435adc639659237146ea6cc70d67359ff5383ebb3",
-      "localBytecodeHash": "ef30a9c4074a0d92c135e693d96082b490fce149f1eb767af2830762f69d772a",
-      "deployedBytecodeHash": "ef30a9c4074a0d92c135e693d96082b490fce149f1eb767af2830762f69d772a",
+      "address": "0xc306e9aad24c0231b948ef47138263041a128acd",
+      "constructorCode": "608060405234801561001057600080fd5b5061123a806100206000396000f3fe",
+      "bodyBytecodeHash": "12f9938a0fe31317b5dccc64115e275ef23bd98cb325cafdfd6ceed60e108aa5",
+      "localBytecodeHash": "7337622024f033c9f8f028cb1a61a9ab0ff35d23eacdc67dac28f44c5b630ff1",
+      "deployedBytecodeHash": "7337622024f033c9f8f028cb1a61a9ab0ff35d23eacdc67dac28f44c5b630ff1",
       "types": {
         "t_address": {
           "id": "t_address",
@@ -150,6 +150,18 @@
           "length": "dyn",
           "kind": "array",
           "label": "address[]"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_array:dyn<t_string>": {
+          "id": "t_array:dyn<t_string>",
+          "valueType": "t_string",
+          "length": "dyn",
+          "kind": "array",
+          "label": "string[]"
         }
       },
       "storage": [
@@ -160,6 +172,14 @@
           "astId": 234,
           "type": "t_array:dyn<t_address>",
           "src": "96:33:1"
+        },
+        {
+          "contract": "storageBuilder",
+          "path": "contracts/StorageBuilder.sol",
+          "label": "languages",
+          "astId": 237,
+          "type": "t_array:dyn<t_string>",
+          "src": "135:25:1"
         }
       ],
       "warnings": {
@@ -169,7 +189,20 @@
         "hasInitialValuesInDeclarations": false,
         "uninitializedBaseContracts": [],
         "storageUncheckedVars": [],
-        "storageDiff": []
+        "storageDiff": [
+          {
+            "action": "append",
+            "updated": {
+              "index": 1,
+              "contract": "storageBuilder",
+              "path": "contracts/StorageBuilder.sol",
+              "label": "languages",
+              "astId": 237,
+              "type": "t_array:dyn<t_string>",
+              "src": "135:25:1"
+            }
+          }
+        ]
       }
     }
   },
@@ -179,7 +212,7 @@
       {
         "address": "0x9fc03fcfed3354a201abd0181b35401f0a1540eb",
         "version": "0.1.0",
-        "implementation": "0x6ac35f97c649b163655579bd0df04126da61795b"
+        "implementation": "0xc306e9aad24c0231b948ef47138263041a128acd"
       }
     ]
   },

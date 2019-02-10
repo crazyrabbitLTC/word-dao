@@ -337,14 +337,14 @@
     "absolutePath": "/Users/dennisonzeppelin/Documents/word-dao/contracts/WordDao.sol",
     "exportedSymbols": {
       "WordDao": [
-        397
+        406
       ]
     },
-    "id": 398,
+    "id": 407,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 273,
+        "id": 282,
         "literals": [
           "solidity",
           ">=",
@@ -360,10 +360,10 @@
       {
         "absolutePath": "zos-lib/contracts/Initializable.sol",
         "file": "zos-lib/contracts/Initializable.sol",
-        "id": 274,
+        "id": 283,
         "nodeType": "ImportDirective",
-        "scope": 398,
-        "sourceUnit": 1090,
+        "scope": 407,
+        "sourceUnit": 1099,
         "src": "34:45:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -371,10 +371,10 @@
       {
         "absolutePath": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
         "file": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
-        "id": 275,
+        "id": 284,
         "nodeType": "ImportDirective",
-        "scope": 398,
-        "sourceUnit": 965,
+        "scope": 407,
+        "sourceUnit": 974,
         "src": "80:58:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -385,17 +385,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 276,
+              "id": 285,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1089,
+              "referencedDeclaration": 1098,
               "src": "160:13:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$1089",
+                "typeIdentifier": "t_contract$_Initializable_$1098",
                 "typeString": "contract Initializable"
               }
             },
-            "id": 277,
+            "id": 286,
             "nodeType": "InheritanceSpecifier",
             "src": "160:13:2"
           },
@@ -403,45 +403,45 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 278,
+              "id": 287,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 964,
+              "referencedDeclaration": 973,
               "src": "175:5:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$964",
+                "typeIdentifier": "t_contract$_ERC20_$973",
                 "typeString": "contract ERC20"
               }
             },
-            "id": 279,
+            "id": 288,
             "nodeType": "InheritanceSpecifier",
             "src": "175:5:2"
           }
         ],
         "contractDependencies": [
-          964,
-          1033,
-          1089
+          973,
+          1042,
+          1098
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 397,
+        "id": 406,
         "linearizedBaseContracts": [
-          397,
-          964,
-          1033,
-          1089
+          406,
+          973,
+          1042,
+          1098
         ],
         "name": "WordDao",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 283,
+            "id": 292,
             "name": "_numberByWords",
             "nodeType": "VariableDeclaration",
-            "scope": 397,
+            "scope": 406,
             "src": "192:51:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -450,9 +450,9 @@
               "typeString": "mapping(uint256 => string)"
             },
             "typeName": {
-              "id": 282,
+              "id": 291,
               "keyType": {
-                "id": 280,
+                "id": 289,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "201:7:2",
@@ -468,7 +468,7 @@
                 "typeString": "mapping(uint256 => string)"
               },
               "valueType": {
-                "id": 281,
+                "id": 290,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "212:6:2",
@@ -483,10 +483,10 @@
           },
           {
             "constant": false,
-            "id": 287,
+            "id": 296,
             "name": "_wordByNumber",
             "nodeType": "VariableDeclaration",
-            "scope": 397,
+            "scope": 406,
             "src": "249:50:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -495,9 +495,9 @@
               "typeString": "mapping(string => uint256)"
             },
             "typeName": {
-              "id": 286,
+              "id": 295,
               "keyType": {
-                "id": 284,
+                "id": 293,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "258:6:2",
@@ -513,7 +513,7 @@
                 "typeString": "mapping(string => uint256)"
               },
               "valueType": {
-                "id": 285,
+                "id": 294,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "268:7:2",
@@ -528,10 +528,10 @@
           },
           {
             "constant": false,
-            "id": 289,
+            "id": 298,
             "name": "_totalWords",
             "nodeType": "VariableDeclaration",
-            "scope": 397,
+            "scope": 406,
             "src": "305:25:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -540,7 +540,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 288,
+              "id": 297,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "305:4:2",
@@ -555,20 +555,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 295,
+            "id": 304,
             "name": "wordAdded",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 294,
+              "id": 303,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 291,
+                  "id": 300,
                   "indexed": false,
                   "name": "_adder",
                   "nodeType": "VariableDeclaration",
-                  "scope": 295,
+                  "scope": 304,
                   "src": "353:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -577,7 +577,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 290,
+                    "id": 299,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "353:7:2",
@@ -592,11 +592,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 293,
+                  "id": 302,
                   "indexed": false,
                   "name": "word",
                   "nodeType": "VariableDeclaration",
-                  "scope": 295,
+                  "scope": 304,
                   "src": "369:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -605,7 +605,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 292,
+                    "id": 301,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "369:6:2",
@@ -624,25 +624,25 @@
           },
           {
             "body": {
-              "id": 304,
+              "id": 313,
               "nodeType": "Block",
               "src": "429:32:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 302,
+                    "id": 311,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 300,
+                      "id": 309,
                       "name": "_totalWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 289,
+                      "referencedDeclaration": 298,
                       "src": "439:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -654,7 +654,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 301,
+                      "id": 310,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -675,27 +675,27 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 303,
+                  "id": 312,
                   "nodeType": "ExpressionStatement",
                   "src": "439:15:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 305,
+            "id": 314,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 298,
+                "id": 307,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 297,
+                  "id": 306,
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1070,
+                  "referencedDeclaration": 1079,
                   "src": "410:11:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -709,18 +709,18 @@
             "name": "initialize",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 296,
+              "id": 305,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "407:2:2"
             },
             "returnParameters": {
-              "id": 299,
+              "id": 308,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "429:0:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "388:73:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -728,7 +728,7 @@
           },
           {
             "body": {
-              "id": 348,
+              "id": 357,
               "nodeType": "Block",
               "src": "518:332:2",
               "statements": [
@@ -742,7 +742,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 315,
+                        "id": 324,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -751,25 +751,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 311,
+                            "id": 320,
                             "name": "_wordByNumber",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 287,
+                            "referencedDeclaration": 296,
                             "src": "611:13:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
                               "typeString": "mapping(string memory => uint256)"
                             }
                           },
-                          "id": 313,
+                          "id": 322,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 312,
+                            "id": 321,
                             "name": "word",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 307,
+                            "referencedDeclaration": 316,
                             "src": "625:4:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
@@ -792,7 +792,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 314,
+                          "id": 323,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -821,21 +821,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 310,
+                      "id": 319,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1107,
-                        1108
+                        1116,
+                        1117
                       ],
-                      "referencedDeclaration": 1107,
+                      "referencedDeclaration": 1116,
                       "src": "603:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 316,
+                    "id": 325,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -849,25 +849,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 317,
+                  "id": 326,
                   "nodeType": "ExpressionStatement",
                   "src": "603:33:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 322,
+                    "id": 331,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 318,
+                      "id": 327,
                       "name": "_totalWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 289,
+                      "referencedDeclaration": 298,
                       "src": "655:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -882,18 +882,18 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 321,
+                      "id": 330,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 319,
+                        "id": 328,
                         "name": "_totalWords",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 298,
                         "src": "669:11:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -905,7 +905,7 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 320,
+                        "id": 329,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -932,14 +932,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 323,
+                  "id": 332,
                   "nodeType": "ExpressionStatement",
                   "src": "655:29:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 328,
+                    "id": 337,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -948,25 +948,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 324,
+                        "id": 333,
                         "name": "_numberByWords",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 283,
+                        "referencedDeclaration": 292,
                         "src": "694:14:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                           "typeString": "mapping(uint256 => string storage ref)"
                         }
                       },
-                      "id": 326,
+                      "id": 335,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 325,
+                        "id": 334,
                         "name": "_totalWords",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 298,
                         "src": "709:11:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -988,11 +988,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 327,
+                      "id": 336,
                       "name": "word",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 307,
+                      "referencedDeclaration": 316,
                       "src": "724:4:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1005,14 +1005,14 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 329,
+                  "id": 338,
                   "nodeType": "ExpressionStatement",
                   "src": "694:34:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 334,
+                    "id": 343,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1021,25 +1021,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 330,
+                        "id": 339,
                         "name": "_wordByNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 287,
+                        "referencedDeclaration": 296,
                         "src": "738:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
                           "typeString": "mapping(string memory => uint256)"
                         }
                       },
-                      "id": 332,
+                      "id": 341,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 331,
+                        "id": 340,
                         "name": "word",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 307,
+                        "referencedDeclaration": 316,
                         "src": "752:4:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1061,11 +1061,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 333,
+                      "id": 342,
                       "name": "_totalWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 289,
+                      "referencedDeclaration": 298,
                       "src": "760:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1078,7 +1078,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 335,
+                  "id": 344,
                   "nodeType": "ExpressionStatement",
                   "src": "738:33:2"
                 },
@@ -1090,18 +1090,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 337,
+                          "id": 346,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1104,
+                          "referencedDeclaration": 1113,
                           "src": "796:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 338,
+                        "id": 347,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1117,11 +1117,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 339,
+                        "id": 348,
                         "name": "word",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 307,
+                        "referencedDeclaration": 316,
                         "src": "808:4:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1140,18 +1140,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 336,
+                      "id": 345,
                       "name": "wordAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 295,
+                      "referencedDeclaration": 304,
                       "src": "786:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory)"
                       }
                     },
-                    "id": 340,
+                    "id": 349,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1165,7 +1165,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 341,
+                  "id": 350,
                   "nodeType": "EmitStatement",
                   "src": "781:32:2"
                 },
@@ -1177,18 +1177,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 343,
+                          "id": 352,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1104,
+                          "referencedDeclaration": 1113,
                           "src": "829:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 344,
+                        "id": 353,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1205,7 +1205,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 345,
+                        "id": 354,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1232,18 +1232,18 @@
                           "typeString": "int_const 1"
                         }
                       ],
-                      "id": 342,
+                      "id": 351,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 875,
+                      "referencedDeclaration": 884,
                       "src": "823:5:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 346,
+                    "id": 355,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1257,29 +1257,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 347,
+                  "id": 356,
                   "nodeType": "ExpressionStatement",
                   "src": "823:20:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 349,
+            "id": 358,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setWord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 308,
+              "id": 317,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 307,
+                  "id": 316,
                   "name": "word",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 358,
                   "src": "484:18:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1288,7 +1288,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 306,
+                    "id": 315,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "484:6:2",
@@ -1304,12 +1304,12 @@
               "src": "483:20:2"
             },
             "returnParameters": {
-              "id": 309,
+              "id": 318,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "518:0:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "467:383:2",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1317,21 +1317,21 @@
           },
           {
             "body": {
-              "id": 364,
+              "id": 373,
               "nodeType": "Block",
               "src": "931:83:2",
               "statements": [
                 {
                   "assignments": [
-                    357
+                    366
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 357,
+                      "id": 366,
                       "name": "returnword",
                       "nodeType": "VariableDeclaration",
-                      "scope": 364,
+                      "scope": 373,
                       "src": "941:18:2",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1340,7 +1340,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 356,
+                        "id": 365,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "941:7:2",
@@ -1353,30 +1353,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 361,
+                  "id": 370,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 358,
+                      "id": 367,
                       "name": "_wordByNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 287,
+                      "referencedDeclaration": 296,
                       "src": "961:13:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
                         "typeString": "mapping(string memory => uint256)"
                       }
                     },
-                    "id": 360,
+                    "id": 369,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 359,
+                      "id": 368,
                       "name": "word",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 351,
+                      "referencedDeclaration": 360,
                       "src": "975:4:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1400,41 +1400,41 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 362,
+                    "id": 371,
                     "name": "returnword",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 357,
+                    "referencedDeclaration": 366,
                     "src": "997:10:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 355,
-                  "id": 363,
+                  "functionReturnParameters": 364,
+                  "id": 372,
                   "nodeType": "Return",
                   "src": "990:17:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 365,
+            "id": 374,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getWordNumber",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 352,
+              "id": 361,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 351,
+                  "id": 360,
                   "name": "word",
                   "nodeType": "VariableDeclaration",
-                  "scope": 365,
+                  "scope": 374,
                   "src": "883:18:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1443,7 +1443,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 350,
+                    "id": 359,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "883:6:2",
@@ -1459,15 +1459,15 @@
               "src": "882:20:2"
             },
             "returnParameters": {
-              "id": 355,
+              "id": 364,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 354,
+                  "id": 363,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 365,
+                  "scope": 374,
                   "src": "923:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1476,7 +1476,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 353,
+                    "id": 362,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "923:7:2",
@@ -1491,7 +1491,7 @@
               ],
               "src": "922:9:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "860:154:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -1499,7 +1499,7 @@
           },
           {
             "body": {
-              "id": 376,
+              "id": 385,
               "nodeType": "Block",
               "src": "1099:50:2",
               "statements": [
@@ -1508,25 +1508,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 372,
+                      "id": 381,
                       "name": "_numberByWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 283,
+                      "referencedDeclaration": 292,
                       "src": "1116:14:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                         "typeString": "mapping(uint256 => string storage ref)"
                       }
                     },
-                    "id": 374,
+                    "id": 383,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 373,
+                      "id": 382,
                       "name": "wordNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 367,
+                      "referencedDeclaration": 376,
                       "src": "1131:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1544,30 +1544,30 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 371,
-                  "id": 375,
+                  "functionReturnParameters": 380,
+                  "id": 384,
                   "nodeType": "Return",
                   "src": "1109:33:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 377,
+            "id": 386,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getNumberWord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 368,
+              "id": 377,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 367,
+                  "id": 376,
                   "name": "wordNumber",
                   "nodeType": "VariableDeclaration",
-                  "scope": 377,
+                  "scope": 386,
                   "src": "1047:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1576,7 +1576,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 366,
+                    "id": 375,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1047:4:2",
@@ -1592,15 +1592,15 @@
               "src": "1046:17:2"
             },
             "returnParameters": {
-              "id": 371,
+              "id": 380,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 370,
+                  "id": 379,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 377,
+                  "scope": 386,
                   "src": "1085:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1609,7 +1609,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 369,
+                    "id": 378,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1085:6:2",
@@ -1624,7 +1624,7 @@
               ],
               "src": "1084:15:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "1024:125:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -1632,54 +1632,54 @@
           },
           {
             "body": {
-              "id": 384,
+              "id": 393,
               "nodeType": "Block",
               "src": "1212:35:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 382,
+                    "id": 391,
                     "name": "_totalWords",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 289,
+                    "referencedDeclaration": 298,
                     "src": "1229:11:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 381,
-                  "id": 383,
+                  "functionReturnParameters": 390,
+                  "id": 392,
                   "nodeType": "Return",
                   "src": "1222:18:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 385,
+            "id": 394,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTotalWords",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 378,
+              "id": 387,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1181:2:2"
             },
             "returnParameters": {
-              "id": 381,
+              "id": 390,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 380,
+                  "id": 389,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 385,
+                  "scope": 394,
                   "src": "1204:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1688,7 +1688,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 379,
+                    "id": 388,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1204:7:2",
@@ -1703,7 +1703,7 @@
               ],
               "src": "1203:9:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "1159:88:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -1711,7 +1711,7 @@
           },
           {
             "body": {
-              "id": 395,
+              "id": 404,
               "nodeType": "Block",
               "src": "1307:45:2",
               "statements": [
@@ -1723,14 +1723,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 391,
+                          "id": 400,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1129,
+                          "referencedDeclaration": 1138,
                           "src": "1332:4:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_WordDao_$397",
+                            "typeIdentifier": "t_contract$_WordDao_$406",
                             "typeString": "contract WordDao"
                           }
                         }
@@ -1738,11 +1738,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_WordDao_$397",
+                            "typeIdentifier": "t_contract$_WordDao_$406",
                             "typeString": "contract WordDao"
                           }
                         ],
-                        "id": 390,
+                        "id": 399,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1755,7 +1755,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 392,
+                      "id": 401,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1769,7 +1769,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 393,
+                    "id": 402,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1783,36 +1783,36 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 389,
-                  "id": 394,
+                  "functionReturnParameters": 398,
+                  "id": 403,
                   "nodeType": "Return",
                   "src": "1317:28:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 396,
+            "id": 405,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBalance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 386,
+              "id": 395,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1276:2:2"
             },
             "returnParameters": {
-              "id": 389,
+              "id": 398,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 388,
+                  "id": 397,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 396,
+                  "scope": 405,
                   "src": "1299:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1821,7 +1821,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 387,
+                    "id": 396,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1299:7:2",
@@ -1836,14 +1836,14 @@
               ],
               "src": "1298:9:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "1257:95:2",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 398,
+        "scope": 407,
         "src": "140:1804:2"
       }
     ],
@@ -1853,14 +1853,14 @@
     "absolutePath": "/Users/dennisonzeppelin/Documents/word-dao/contracts/WordDao.sol",
     "exportedSymbols": {
       "WordDao": [
-        397
+        406
       ]
     },
-    "id": 398,
+    "id": 407,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 273,
+        "id": 282,
         "literals": [
           "solidity",
           ">=",
@@ -1876,10 +1876,10 @@
       {
         "absolutePath": "zos-lib/contracts/Initializable.sol",
         "file": "zos-lib/contracts/Initializable.sol",
-        "id": 274,
+        "id": 283,
         "nodeType": "ImportDirective",
-        "scope": 398,
-        "sourceUnit": 1090,
+        "scope": 407,
+        "sourceUnit": 1099,
         "src": "34:45:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1887,10 +1887,10 @@
       {
         "absolutePath": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
         "file": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
-        "id": 275,
+        "id": 284,
         "nodeType": "ImportDirective",
-        "scope": 398,
-        "sourceUnit": 965,
+        "scope": 407,
+        "sourceUnit": 974,
         "src": "80:58:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1901,17 +1901,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 276,
+              "id": 285,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1089,
+              "referencedDeclaration": 1098,
               "src": "160:13:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$1089",
+                "typeIdentifier": "t_contract$_Initializable_$1098",
                 "typeString": "contract Initializable"
               }
             },
-            "id": 277,
+            "id": 286,
             "nodeType": "InheritanceSpecifier",
             "src": "160:13:2"
           },
@@ -1919,45 +1919,45 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 278,
+              "id": 287,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 964,
+              "referencedDeclaration": 973,
               "src": "175:5:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$964",
+                "typeIdentifier": "t_contract$_ERC20_$973",
                 "typeString": "contract ERC20"
               }
             },
-            "id": 279,
+            "id": 288,
             "nodeType": "InheritanceSpecifier",
             "src": "175:5:2"
           }
         ],
         "contractDependencies": [
-          964,
-          1033,
-          1089
+          973,
+          1042,
+          1098
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 397,
+        "id": 406,
         "linearizedBaseContracts": [
-          397,
-          964,
-          1033,
-          1089
+          406,
+          973,
+          1042,
+          1098
         ],
         "name": "WordDao",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 283,
+            "id": 292,
             "name": "_numberByWords",
             "nodeType": "VariableDeclaration",
-            "scope": 397,
+            "scope": 406,
             "src": "192:51:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1966,9 +1966,9 @@
               "typeString": "mapping(uint256 => string)"
             },
             "typeName": {
-              "id": 282,
+              "id": 291,
               "keyType": {
-                "id": 280,
+                "id": 289,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "201:7:2",
@@ -1984,7 +1984,7 @@
                 "typeString": "mapping(uint256 => string)"
               },
               "valueType": {
-                "id": 281,
+                "id": 290,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "212:6:2",
@@ -1999,10 +1999,10 @@
           },
           {
             "constant": false,
-            "id": 287,
+            "id": 296,
             "name": "_wordByNumber",
             "nodeType": "VariableDeclaration",
-            "scope": 397,
+            "scope": 406,
             "src": "249:50:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2011,9 +2011,9 @@
               "typeString": "mapping(string => uint256)"
             },
             "typeName": {
-              "id": 286,
+              "id": 295,
               "keyType": {
-                "id": 284,
+                "id": 293,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "258:6:2",
@@ -2029,7 +2029,7 @@
                 "typeString": "mapping(string => uint256)"
               },
               "valueType": {
-                "id": 285,
+                "id": 294,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "268:7:2",
@@ -2044,10 +2044,10 @@
           },
           {
             "constant": false,
-            "id": 289,
+            "id": 298,
             "name": "_totalWords",
             "nodeType": "VariableDeclaration",
-            "scope": 397,
+            "scope": 406,
             "src": "305:25:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2056,7 +2056,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 288,
+              "id": 297,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "305:4:2",
@@ -2071,20 +2071,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 295,
+            "id": 304,
             "name": "wordAdded",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 294,
+              "id": 303,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 291,
+                  "id": 300,
                   "indexed": false,
                   "name": "_adder",
                   "nodeType": "VariableDeclaration",
-                  "scope": 295,
+                  "scope": 304,
                   "src": "353:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2093,7 +2093,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 290,
+                    "id": 299,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "353:7:2",
@@ -2108,11 +2108,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 293,
+                  "id": 302,
                   "indexed": false,
                   "name": "word",
                   "nodeType": "VariableDeclaration",
-                  "scope": 295,
+                  "scope": 304,
                   "src": "369:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2121,7 +2121,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 292,
+                    "id": 301,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "369:6:2",
@@ -2140,25 +2140,25 @@
           },
           {
             "body": {
-              "id": 304,
+              "id": 313,
               "nodeType": "Block",
               "src": "429:32:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 302,
+                    "id": 311,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 300,
+                      "id": 309,
                       "name": "_totalWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 289,
+                      "referencedDeclaration": 298,
                       "src": "439:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2170,7 +2170,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 301,
+                      "id": 310,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2191,27 +2191,27 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 303,
+                  "id": 312,
                   "nodeType": "ExpressionStatement",
                   "src": "439:15:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 305,
+            "id": 314,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 298,
+                "id": 307,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 297,
+                  "id": 306,
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1070,
+                  "referencedDeclaration": 1079,
                   "src": "410:11:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2225,18 +2225,18 @@
             "name": "initialize",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 296,
+              "id": 305,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "407:2:2"
             },
             "returnParameters": {
-              "id": 299,
+              "id": 308,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "429:0:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "388:73:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2244,7 +2244,7 @@
           },
           {
             "body": {
-              "id": 348,
+              "id": 357,
               "nodeType": "Block",
               "src": "518:332:2",
               "statements": [
@@ -2258,7 +2258,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 315,
+                        "id": 324,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2267,25 +2267,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 311,
+                            "id": 320,
                             "name": "_wordByNumber",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 287,
+                            "referencedDeclaration": 296,
                             "src": "611:13:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
                               "typeString": "mapping(string memory => uint256)"
                             }
                           },
-                          "id": 313,
+                          "id": 322,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 312,
+                            "id": 321,
                             "name": "word",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 307,
+                            "referencedDeclaration": 316,
                             "src": "625:4:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
@@ -2308,7 +2308,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 314,
+                          "id": 323,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2337,21 +2337,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 310,
+                      "id": 319,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1107,
-                        1108
+                        1116,
+                        1117
                       ],
-                      "referencedDeclaration": 1107,
+                      "referencedDeclaration": 1116,
                       "src": "603:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 316,
+                    "id": 325,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2365,25 +2365,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 317,
+                  "id": 326,
                   "nodeType": "ExpressionStatement",
                   "src": "603:33:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 322,
+                    "id": 331,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 318,
+                      "id": 327,
                       "name": "_totalWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 289,
+                      "referencedDeclaration": 298,
                       "src": "655:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2398,18 +2398,18 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 321,
+                      "id": 330,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 319,
+                        "id": 328,
                         "name": "_totalWords",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 298,
                         "src": "669:11:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2421,7 +2421,7 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 320,
+                        "id": 329,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2448,14 +2448,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 323,
+                  "id": 332,
                   "nodeType": "ExpressionStatement",
                   "src": "655:29:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 328,
+                    "id": 337,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2464,25 +2464,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 324,
+                        "id": 333,
                         "name": "_numberByWords",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 283,
+                        "referencedDeclaration": 292,
                         "src": "694:14:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                           "typeString": "mapping(uint256 => string storage ref)"
                         }
                       },
-                      "id": 326,
+                      "id": 335,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 325,
+                        "id": 334,
                         "name": "_totalWords",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 298,
                         "src": "709:11:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2504,11 +2504,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 327,
+                      "id": 336,
                       "name": "word",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 307,
+                      "referencedDeclaration": 316,
                       "src": "724:4:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -2521,14 +2521,14 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 329,
+                  "id": 338,
                   "nodeType": "ExpressionStatement",
                   "src": "694:34:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 334,
+                    "id": 343,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2537,25 +2537,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 330,
+                        "id": 339,
                         "name": "_wordByNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 287,
+                        "referencedDeclaration": 296,
                         "src": "738:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
                           "typeString": "mapping(string memory => uint256)"
                         }
                       },
-                      "id": 332,
+                      "id": 341,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 331,
+                        "id": 340,
                         "name": "word",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 307,
+                        "referencedDeclaration": 316,
                         "src": "752:4:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2577,11 +2577,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 333,
+                      "id": 342,
                       "name": "_totalWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 289,
+                      "referencedDeclaration": 298,
                       "src": "760:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2594,7 +2594,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 335,
+                  "id": 344,
                   "nodeType": "ExpressionStatement",
                   "src": "738:33:2"
                 },
@@ -2606,18 +2606,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 337,
+                          "id": 346,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1104,
+                          "referencedDeclaration": 1113,
                           "src": "796:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 338,
+                        "id": 347,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2633,11 +2633,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 339,
+                        "id": 348,
                         "name": "word",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 307,
+                        "referencedDeclaration": 316,
                         "src": "808:4:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2656,18 +2656,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 336,
+                      "id": 345,
                       "name": "wordAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 295,
+                      "referencedDeclaration": 304,
                       "src": "786:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory)"
                       }
                     },
-                    "id": 340,
+                    "id": 349,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2681,7 +2681,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 341,
+                  "id": 350,
                   "nodeType": "EmitStatement",
                   "src": "781:32:2"
                 },
@@ -2693,18 +2693,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 343,
+                          "id": 352,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1104,
+                          "referencedDeclaration": 1113,
                           "src": "829:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 344,
+                        "id": 353,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2721,7 +2721,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 345,
+                        "id": 354,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2748,18 +2748,18 @@
                           "typeString": "int_const 1"
                         }
                       ],
-                      "id": 342,
+                      "id": 351,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 875,
+                      "referencedDeclaration": 884,
                       "src": "823:5:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 346,
+                    "id": 355,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2773,29 +2773,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 347,
+                  "id": 356,
                   "nodeType": "ExpressionStatement",
                   "src": "823:20:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 349,
+            "id": 358,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setWord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 308,
+              "id": 317,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 307,
+                  "id": 316,
                   "name": "word",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 358,
                   "src": "484:18:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2804,7 +2804,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 306,
+                    "id": 315,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "484:6:2",
@@ -2820,12 +2820,12 @@
               "src": "483:20:2"
             },
             "returnParameters": {
-              "id": 309,
+              "id": 318,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "518:0:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "467:383:2",
             "stateMutability": "payable",
             "superFunction": null,
@@ -2833,21 +2833,21 @@
           },
           {
             "body": {
-              "id": 364,
+              "id": 373,
               "nodeType": "Block",
               "src": "931:83:2",
               "statements": [
                 {
                   "assignments": [
-                    357
+                    366
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 357,
+                      "id": 366,
                       "name": "returnword",
                       "nodeType": "VariableDeclaration",
-                      "scope": 364,
+                      "scope": 373,
                       "src": "941:18:2",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2856,7 +2856,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 356,
+                        "id": 365,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "941:7:2",
@@ -2869,30 +2869,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 361,
+                  "id": 370,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 358,
+                      "id": 367,
                       "name": "_wordByNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 287,
+                      "referencedDeclaration": 296,
                       "src": "961:13:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
                         "typeString": "mapping(string memory => uint256)"
                       }
                     },
-                    "id": 360,
+                    "id": 369,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 359,
+                      "id": 368,
                       "name": "word",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 351,
+                      "referencedDeclaration": 360,
                       "src": "975:4:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -2916,41 +2916,41 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 362,
+                    "id": 371,
                     "name": "returnword",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 357,
+                    "referencedDeclaration": 366,
                     "src": "997:10:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 355,
-                  "id": 363,
+                  "functionReturnParameters": 364,
+                  "id": 372,
                   "nodeType": "Return",
                   "src": "990:17:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 365,
+            "id": 374,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getWordNumber",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 352,
+              "id": 361,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 351,
+                  "id": 360,
                   "name": "word",
                   "nodeType": "VariableDeclaration",
-                  "scope": 365,
+                  "scope": 374,
                   "src": "883:18:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2959,7 +2959,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 350,
+                    "id": 359,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "883:6:2",
@@ -2975,15 +2975,15 @@
               "src": "882:20:2"
             },
             "returnParameters": {
-              "id": 355,
+              "id": 364,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 354,
+                  "id": 363,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 365,
+                  "scope": 374,
                   "src": "923:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2992,7 +2992,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 353,
+                    "id": 362,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "923:7:2",
@@ -3007,7 +3007,7 @@
               ],
               "src": "922:9:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "860:154:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -3015,7 +3015,7 @@
           },
           {
             "body": {
-              "id": 376,
+              "id": 385,
               "nodeType": "Block",
               "src": "1099:50:2",
               "statements": [
@@ -3024,25 +3024,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 372,
+                      "id": 381,
                       "name": "_numberByWords",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 283,
+                      "referencedDeclaration": 292,
                       "src": "1116:14:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                         "typeString": "mapping(uint256 => string storage ref)"
                       }
                     },
-                    "id": 374,
+                    "id": 383,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 373,
+                      "id": 382,
                       "name": "wordNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 367,
+                      "referencedDeclaration": 376,
                       "src": "1131:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3060,30 +3060,30 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 371,
-                  "id": 375,
+                  "functionReturnParameters": 380,
+                  "id": 384,
                   "nodeType": "Return",
                   "src": "1109:33:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 377,
+            "id": 386,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getNumberWord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 368,
+              "id": 377,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 367,
+                  "id": 376,
                   "name": "wordNumber",
                   "nodeType": "VariableDeclaration",
-                  "scope": 377,
+                  "scope": 386,
                   "src": "1047:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3092,7 +3092,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 366,
+                    "id": 375,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1047:4:2",
@@ -3108,15 +3108,15 @@
               "src": "1046:17:2"
             },
             "returnParameters": {
-              "id": 371,
+              "id": 380,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 370,
+                  "id": 379,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 377,
+                  "scope": 386,
                   "src": "1085:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3125,7 +3125,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 369,
+                    "id": 378,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1085:6:2",
@@ -3140,7 +3140,7 @@
               ],
               "src": "1084:15:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "1024:125:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -3148,54 +3148,54 @@
           },
           {
             "body": {
-              "id": 384,
+              "id": 393,
               "nodeType": "Block",
               "src": "1212:35:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 382,
+                    "id": 391,
                     "name": "_totalWords",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 289,
+                    "referencedDeclaration": 298,
                     "src": "1229:11:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 381,
-                  "id": 383,
+                  "functionReturnParameters": 390,
+                  "id": 392,
                   "nodeType": "Return",
                   "src": "1222:18:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 385,
+            "id": 394,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTotalWords",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 378,
+              "id": 387,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1181:2:2"
             },
             "returnParameters": {
-              "id": 381,
+              "id": 390,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 380,
+                  "id": 389,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 385,
+                  "scope": 394,
                   "src": "1204:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3204,7 +3204,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 379,
+                    "id": 388,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1204:7:2",
@@ -3219,7 +3219,7 @@
               ],
               "src": "1203:9:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "1159:88:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -3227,7 +3227,7 @@
           },
           {
             "body": {
-              "id": 395,
+              "id": 404,
               "nodeType": "Block",
               "src": "1307:45:2",
               "statements": [
@@ -3239,14 +3239,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 391,
+                          "id": 400,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1129,
+                          "referencedDeclaration": 1138,
                           "src": "1332:4:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_WordDao_$397",
+                            "typeIdentifier": "t_contract$_WordDao_$406",
                             "typeString": "contract WordDao"
                           }
                         }
@@ -3254,11 +3254,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_WordDao_$397",
+                            "typeIdentifier": "t_contract$_WordDao_$406",
                             "typeString": "contract WordDao"
                           }
                         ],
-                        "id": 390,
+                        "id": 399,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3271,7 +3271,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 392,
+                      "id": 401,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3285,7 +3285,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 393,
+                    "id": 402,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3299,36 +3299,36 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 389,
-                  "id": 394,
+                  "functionReturnParameters": 398,
+                  "id": 403,
                   "nodeType": "Return",
                   "src": "1317:28:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 396,
+            "id": 405,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBalance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 386,
+              "id": 395,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1276:2:2"
             },
             "returnParameters": {
-              "id": 389,
+              "id": 398,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 388,
+                  "id": 397,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 396,
+                  "scope": 405,
                   "src": "1299:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3337,7 +3337,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 387,
+                    "id": 396,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1299:7:2",
@@ -3352,14 +3352,14 @@
               ],
               "src": "1298:9:2"
             },
-            "scope": 397,
+            "scope": 406,
             "src": "1257:95:2",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 398,
+        "scope": 407,
         "src": "140:1804:2"
       }
     ],
@@ -3384,7 +3384,7 @@
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-02-10T00:08:19.403Z",
+  "updatedAt": "2019-02-10T02:43:11.420Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

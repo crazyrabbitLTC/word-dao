@@ -2,7 +2,7 @@ pragma solidity ^0.5.0;
 
 import "../contracts/Storage.sol";
 
-contract storageBuilder {
+contract StorageBuilder {
     
     address[] public storageLocations;
     string[] public languages;

@@ -1128,7 +1128,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1091,
+                            "referencedDeclaration": 1100,
                             "src": "1537:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -1175,7 +1175,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1098,
+                      "referencedDeclaration": 1107,
                       "src": "1527:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1872,7 +1872,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1104,
+                          "referencedDeclaration": 1113,
                           "src": "2035:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3844,7 +3844,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1091,
+                            "referencedDeclaration": 1100,
                             "src": "1537:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -3891,7 +3891,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1098,
+                      "referencedDeclaration": 1107,
                       "src": "1527:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4588,7 +4588,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1104,
+                          "referencedDeclaration": 1113,
                           "src": "2035:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5685,7 +5685,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-02-10T00:08:19.388Z",
+  "updatedAt": "2019-02-10T02:43:11.430Z",
   "devdoc": {
     "methods": {}
   },
