@@ -1,7 +1,7 @@
 {
   "contracts": {
     "Storage": {
-      "address": "0x82E518Bc87B4C7389Eba0F67a8863f70d0E4d987",
+      "address": "0xE98822fc785EA7669C3a470bC5DFfE32778f84A5",
       "constructorCode": "608060405234801561001057600080fd5b50610e16806100206000396000f3fe",
       "bodyBytecodeHash": "eab4b7f7cb4fe54a5bced635d18ae7ad5f81f68f2bacf2be95f17647a29ff1a8",
       "localBytecodeHash": "d061ccb76dfdb8ddd6a79b61081ad3b688757b777f1ac69dd67f522ace57a678",
@@ -79,25 +79,25 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initialized",
-          "astId": 1187,
+          "astId": 1056,
           "type": "t_bool",
-          "src": "757:24:8"
+          "src": "757:24:7"
         },
         {
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initializing",
-          "astId": 1189,
+          "astId": 1058,
           "type": "t_bool",
-          "src": "876:25:8"
+          "src": "876:25:7"
         },
         {
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "______gap",
-          "astId": 1238,
+          "astId": 1107,
           "type": "t_array:50<t_uint256>",
-          "src": "1891:29:8"
+          "src": "1891:29:7"
         },
         {
           "contract": "Storage",
@@ -205,7 +205,7 @@
       }
     },
     "StorageBuilder": {
-      "address": "0xB395647B3E1513493d3FA628528290B6282B1EFD",
+      "address": "0xA89ADE32001E7b45C78D33225C1258c6368fAe96",
       "constructorCode": "608060405234801561001057600080fd5b506116a4806100206000396000f3fe",
       "bodyBytecodeHash": "e783cb6080680a18006fe7709cbab9e20ef8ad2d705c781f3add52cb2c23042f",
       "localBytecodeHash": "780f9870e6adda7ea9687bca25e82b9bbb1a7dbb52c867fe337fd35c04e90b22",
@@ -263,11 +263,11 @@
       }
     },
     "WordDao": {
-      "address": "0x8E6e22BF5179df22A245c8B9f0E15E39af9b3bB8",
-      "constructorCode": "608060405234801561001057600080fd5b50611875806100206000396000f3fe",
-      "bodyBytecodeHash": "a7d20874bd55e3eb9d4129cc0c24e643ecc51273562d6743541d3800597667eb",
-      "localBytecodeHash": "86dd64d1d60def15c341c8aabda51b48a26cff968cdfe4bd0e991af272aa23ee",
-      "deployedBytecodeHash": "86dd64d1d60def15c341c8aabda51b48a26cff968cdfe4bd0e991af272aa23ee",
+      "address": "0x58ADc87Cc11F6beF73094f0d85aBC53b3936265a",
+      "constructorCode": "608060405234801561001057600080fd5b50612a4b806100206000396000f3fe",
+      "bodyBytecodeHash": "549dfe1361e3d781adff084ea914a0b9e60081c01312434f2dea554f3ac63107",
+      "localBytecodeHash": "db210c505747282d723763cf60913b0f5ad759a56bb09a9b3e22d11598388229",
+      "deployedBytecodeHash": "db210c505747282d723763cf60913b0f5ad759a56bb09a9b3e22d11598388229",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -286,22 +286,17 @@
           "kind": "array",
           "label": "uint256[50]"
         },
-        "t_mapping<t_uint256>": {
-          "id": "t_mapping<t_uint256>",
-          "valueType": "t_uint256",
-          "label": "mapping(key => uint256)",
-          "kind": "mapping"
-        },
-        "t_string": {
-          "id": "t_string",
+        "t_address": {
+          "id": "t_address",
           "kind": "elementary",
-          "label": "string"
+          "label": "address"
         },
-        "t_mapping<t_string>": {
-          "id": "t_mapping<t_string>",
-          "valueType": "t_string",
-          "label": "mapping(key => string)",
-          "kind": "mapping"
+        "t_array:dyn<t_address>": {
+          "id": "t_array:dyn<t_address>",
+          "valueType": "t_address",
+          "length": "dyn",
+          "kind": "array",
+          "label": "address[]"
         }
       },
       "storage": [
@@ -309,81 +304,49 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initialized",
-          "astId": 1187,
+          "astId": 1056,
           "type": "t_bool",
-          "src": "757:24:8"
+          "src": "757:24:7"
         },
         {
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initializing",
-          "astId": 1189,
+          "astId": 1058,
           "type": "t_bool",
-          "src": "876:25:8"
+          "src": "876:25:7"
         },
         {
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "______gap",
-          "astId": 1238,
+          "astId": 1107,
           "type": "t_array:50<t_uint256>",
-          "src": "1891:29:8"
-        },
-        {
-          "contract": "ERC20",
-          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
-          "label": "_balances",
-          "astId": 691,
-          "type": "t_mapping<t_uint256>",
-          "src": "774:46:6"
-        },
-        {
-          "contract": "ERC20",
-          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
-          "label": "_allowed",
-          "astId": 697,
-          "type": "t_mapping<t_uint256>",
-          "src": "827:66:6"
-        },
-        {
-          "contract": "ERC20",
-          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
-          "label": "_totalSupply",
-          "astId": 699,
-          "type": "t_uint256",
-          "src": "900:28:6"
-        },
-        {
-          "contract": "ERC20",
-          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20.sol",
-          "label": "______gap",
-          "astId": 1113,
-          "type": "t_array:50<t_uint256>",
-          "src": "7661:29:6"
+          "src": "1891:29:7"
         },
         {
           "contract": "WordDao",
-          "path": "contracts/oldWordDao.sol",
-          "label": "_numberByWords",
-          "astId": 433,
-          "type": "t_mapping<t_string>",
-          "src": "192:51:4"
+          "path": "contracts/WordDao.sol",
+          "label": "erc20",
+          "astId": 392,
+          "type": "t_address",
+          "src": "302:18:3"
         },
         {
           "contract": "WordDao",
-          "path": "contracts/oldWordDao.sol",
-          "label": "_wordByNumber",
-          "astId": 437,
-          "type": "t_mapping<t_uint256>",
-          "src": "249:50:4"
+          "path": "contracts/WordDao.sol",
+          "label": "dataBank",
+          "astId": 395,
+          "type": "t_array:dyn<t_address>",
+          "src": "326:25:3"
         },
         {
           "contract": "WordDao",
-          "path": "contracts/oldWordDao.sol",
-          "label": "_totalWords",
-          "astId": 439,
-          "type": "t_uint256",
-          "src": "305:25:4"
+          "path": "contracts/WordDao.sol",
+          "label": "dataBankBuilder",
+          "astId": 397,
+          "type": "t_address",
+          "src": "357:37:3"
         }
       ],
       "warnings": {
@@ -399,27 +362,22 @@
   "proxies": {
     "word-dao/WordDao": [
       {
-        "address": "0x925AA7AEF31a2352A9Ea5120BD3BCB9e82AAD571",
+        "address": "0xa00d112fadFE032A8eF8A64448a9E9F7233d71D9",
         "version": "0.1.0",
-        "implementation": "0x8E6e22BF5179df22A245c8B9f0E15E39af9b3bB8"
-      },
-      {
-        "address": "0x87c80167581254B4Ad489FE2984971800e881D5c",
-        "version": "0.1.0",
-        "implementation": "0x8E6e22BF5179df22A245c8B9f0E15E39af9b3bB8"
+        "implementation": "0x58ADc87Cc11F6beF73094f0d85aBC53b3936265a"
       }
     ]
   },
   "zosversion": "2.2",
+  "version": "0.1.0",
   "dependencies": {
     "openzeppelin-eth": {
-      "package": "0xEaAA0eF78097D041aEBaa6478BB00C72c40E2eAe",
+      "package": "0x403a7956f577dA30eE0B8Ec44B1a181156eEBae9",
       "version": "2.1.3",
       "customDeploy": true
     }
   },
-  "version": "0.1.0",
   "proxyAdmin": {
-    "address": "0x06D890cB8AC159b3c6EEF3eD458B24a2417685f9"
+    "address": "0x94CBE10B5C5988e3456C572eF092e9D215af627C"
   }
 }

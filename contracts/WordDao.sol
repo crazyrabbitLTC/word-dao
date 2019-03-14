@@ -10,16 +10,42 @@ contract WordDao is Initializable {
 
     //App public zosApp;
     ERC20 public erc20;
-    Storage[] public dataBank;
+
+    //This could be a struct array with Dao + tokenAddress
+    ERC20[] public tokenAddresses;
+    string[] public DaoList;
+    Storage[] public dataBanks;
+
+
     StorageBuilder public dataBankBuilder;
 
+
+    //event for creating a dao
+    event DaoCreated(string language, address ERC20Token, address DataBank);
 
     //this function should create an ERC20 and databankbuilder. I should not need to enter the addresses. 
     function initialize() initializer public {
 
         //zosApp = new App();
-        erc20 = new ERC20();
+        //Each Dao should make its own token
+        //erc20 = new ERC20();
+
+        //This should be upgradable
         dataBankBuilder = new StorageBuilder();
+    }
+
+    //in the future this should have an owner.
+    function createWordDao(string memory _language) public {
+        
+        ERC20 _erc20 = new ERC20();
+        tokenAddresses.push(_erc20);
+        DaoList.push(_language);
+
+        Storage _tempStoreAddress;
+        _tempStoreAddress = dataBankBuilder.deployStorage(_language, _erc20);
+        dataBanks.push(_tempStoreAddress);
+
+        emit DaoCreated(_language, address(_erc20), address(_tempStoreAddress));
     }
 
 
