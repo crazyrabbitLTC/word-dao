@@ -9,10 +9,11 @@ const StorageContract = Contracts.getFromLocal("Storage");
 contract("builder", accounts => {
   beforeEach(async function() {
     this.project = await TestHelper();
+
+    console.log(this.project);
   });
 
   it("Should have no languages at first deploy", async () => {
-    console.log(StorageBuilder);
     const builderInstance = await this.project.createProxy(StorageBuilder);
     const languageCount = await builderInstance.getStorageCount();
 

@@ -1,6 +1,8 @@
 pragma solidity ^0.5.0;
 
-contract Storage {
+import "zos-lib/contracts/Initializable.sol";
+
+contract Storage is Initializable {
     
     //modifyer to check if Uint is valid
     //modifyer to check if Bytes32 is valid
@@ -40,7 +42,7 @@ contract Storage {
         uint256 _wordNumber,
         address indexed _from);
         
-    constructor (string memory _language) public {
+    function initialize(string memory _language) initializer public {
         language = _language;
     }
     

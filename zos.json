@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "contracts": {
     "WordDao": "WordDao",
-    "storageBuilder": "storageBuilder"
+    "storageBuilder": "storageBuilder",
+    "StorageBuilder": "StorageBuilder",
+    "Storage": "Storage"
   },
   "dependencies": {
     "openzeppelin-eth": "^2.1.3"
