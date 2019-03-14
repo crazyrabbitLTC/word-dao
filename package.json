@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "openzeppelin-eth": "^2.1.3",
     "truffle": "^5.0.2",
-    "zos-lib": "^2.1.1"
+    "zos": "^2.2.1",
+    "zos-lib": "^2.2.1"
   }
 }
