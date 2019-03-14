@@ -402,6 +402,11 @@
         "address": "0x925AA7AEF31a2352A9Ea5120BD3BCB9e82AAD571",
         "version": "0.1.0",
         "implementation": "0x8E6e22BF5179df22A245c8B9f0E15E39af9b3bB8"
+      },
+      {
+        "address": "0x87c80167581254B4Ad489FE2984971800e881D5c",
+        "version": "0.1.0",
+        "implementation": "0x8E6e22BF5179df22A245c8B9f0E15E39af9b3bB8"
       }
     ]
   },
