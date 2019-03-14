@@ -1,5 +1,5 @@
 {
   "network": "local",
-  "from": "0x7a77716facf9df1efa78d389a122d8a0b754193c",
-  "expires": "2019-02-10T00:22:23.508Z"
+  "timeout": "3600",
+  "expires": "2019-03-14T15:47:58.763Z"
 }
