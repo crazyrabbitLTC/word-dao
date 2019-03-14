@@ -12,6 +12,11 @@ contract StorageBuilder {
     function getStorageCount() public view returns(uint256){
         return storageLocations.length;
     }
+
+    function getLanuageAtIndex(uint _index) external view returns(string memory){
+        require(_index <= languages.length-1, "Index requested out of range");
+        return langauges[_index];
+    }
     
     function deployStorage(string calldata _language) external returns(address){
         Storage c = new Storage();

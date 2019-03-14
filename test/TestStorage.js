@@ -6,44 +6,46 @@ require("chai").should();
 const StorageBuilder = Contracts.getFromLocal("StorageBuilder");
 const StorageContract = Contracts.getFromLocal("Storage");
 
-contract("builder", accounts => {
+contract("builder", function (accounts) {
+
+  let builderInstance;
+
   beforeEach(async function() {
     this.project = await TestHelper();
-
-    console.log(this.project);
+    builderInstance = await this.project.createProxy(StorageBuilder);
   });
 
-  it("Should have no languages at first deploy", async () => {
-    const builderInstance = await this.project.createProxy(StorageBuilder);
-    const languageCount = await builderInstance.getStorageCount();
+  it("Should have no languages at first deploy", async function () {
+    //const builderInstance = await this.project.createProxy(StorageBuilder);
+    const languageCount = await builderInstance.methods.getStorageCount().call();
 
     assert.equal(languageCount, 0, "No languages set yet");
   });
-  xit("Should add a language when a storage is deployed", async () => {
-    const builderInstance = await StorageBuilder.deployed();
-    const deployStorage = await builderInstance.deployStorage("English");
-    const languageCount = await builderInstance.getStorageCount();
+
+  it("Should add a language when a storage is deployed", async function () {
+    
+    const deployStorage = await builderInstance.methods.deployStorage("English").send({from: accounts[0], gas: 5000000});
+    const languageCount = await builderInstance.methods.getStorageCount().call();
     //console.log("Languages: ", languageCount);
     assert.equal(languageCount, 1, "One Language set");
   });
 
-  xit("Should deploy multiple languages", async () => {
-    const builderInstance = await StorageBuilder.deployed();
-    await builderInstance.deployStorage("English");
-    await builderInstance.deployStorage("Spanish");
-    const languageCount = await builderInstance.getStorageCount();
+  it("Should deploy multiple languages", async function () {
+    await builderInstance.methods.deployStorage("English").send({from: accounts[0], gas: 5000000});
+    await builderInstance.methods.deployStorage("Spanish").send({from: accounts[0], gas: 5000000});
+    await builderInstance.methods.deployStorage("Russian").send({from: accounts[0], gas: 5000000});
+    const languageCount = await builderInstance.methods.getStorageCount().call();
     assert.equal(languageCount, 3, "Three languages set");
   });
 
-  xit("Should return the language of the storage deployed", async () => {
-    const builderInstance = await StorageBuilder.deployed();
-    await builderInstance.deployStorage("English");
-    await builderInstance.deployStorage("Spanish");
-    const languageCount = await builderInstance.languages(2);
+  it("Should return the language of the storage deployed", async function () {
+    await builderInstance.methods.deployStorage("English").send({from: accounts[0], gas: 5000000});
+    await builderInstance.methods.deployStorage("Spanish").send({from: accounts[0], gas: 5000000});
+    const languageCount = await builderInstance.methods.languages(1).call();
     assert.equal(languageCount, "Spanish", "Correct language returned");
   });
 
-  xit("Should save the address of the deployed storage", async () => {
+  xit("Should save the address of the deployed storage", async function () {
     const builderInstance = await StorageBuilder.deployed();
     const deployedStorageAddress = await builderInstance.deployStorage(
       "German"
@@ -61,7 +63,7 @@ contract("builder", accounts => {
     //console.log(deployedStorageAddress.logs[0].args);
   });
 
-  xit("Should Deploy a storage", async () => {
+  xit("Should Deploy a storage", async function () {
     const builderInstance = await StorageBuilder.deployed();
     const deployedStorageAddress = await builderInstance.deployStorage(
       "German"
@@ -74,7 +76,7 @@ contract("builder", accounts => {
     assert.equal(storageName, "German", "Storage language is not correct.");
   });
 
-  xit("Deployed storage should save a word", async () => {
+  xit("Deployed storage should save a word", async function () {
     const builderInstance = await StorageBuilder.deployed();
     const deployedStorageAddress = await builderInstance.deployStorage(
       "German"
