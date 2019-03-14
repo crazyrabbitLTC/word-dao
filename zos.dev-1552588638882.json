@@ -1,11 +1,11 @@
 {
   "contracts": {
     "Storage": {
-      "address": "0xE98822fc785EA7669C3a470bC5DFfE32778f84A5",
-      "constructorCode": "608060405234801561001057600080fd5b50610e16806100206000396000f3fe",
-      "bodyBytecodeHash": "eab4b7f7cb4fe54a5bced635d18ae7ad5f81f68f2bacf2be95f17647a29ff1a8",
-      "localBytecodeHash": "d061ccb76dfdb8ddd6a79b61081ad3b688757b777f1ac69dd67f522ace57a678",
-      "deployedBytecodeHash": "d061ccb76dfdb8ddd6a79b61081ad3b688757b777f1ac69dd67f522ace57a678",
+      "address": "0x18025610855a43A43C78Bf42E44cc6e5b4A22894",
+      "constructorCode": "608060405234801561001057600080fd5b50610f00806100206000396000f3fe",
+      "bodyBytecodeHash": "3dedb0225c4cf09bcc1d347502690acdb4d8196e2e97d49a194490eef47a05d8",
+      "localBytecodeHash": "866f26f4060835a98ded1b7204d746ef1a9342bbf9f2f6eba1bd5d3229d6186b",
+      "deployedBytecodeHash": "866f26f4060835a98ded1b7204d746ef1a9342bbf9f2f6eba1bd5d3229d6186b",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -23,6 +23,11 @@
           "length": "50",
           "kind": "array",
           "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
         },
         "t_string": {
           "id": "t_string",
@@ -79,7 +84,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initialized",
-          "astId": 1056,
+          "astId": 1131,
           "type": "t_bool",
           "src": "757:24:7"
         },
@@ -87,7 +92,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initializing",
-          "astId": 1058,
+          "astId": 1133,
           "type": "t_bool",
           "src": "876:25:7"
         },
@@ -95,105 +100,113 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "______gap",
-          "astId": 1107,
+          "astId": 1182,
           "type": "t_array:50<t_uint256>",
           "src": "1891:29:7"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
+          "label": "tokenAddress",
+          "astId": 64,
+          "type": "t_address",
+          "src": "172:25:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
           "label": "wordByNumber",
-          "astId": 65,
+          "astId": 68,
           "type": "t_mapping<t_string>",
-          "src": "398:48:1"
+          "src": "489:48:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "numberForWord",
-          "astId": 69,
+          "astId": 72,
           "type": "t_mapping<t_uint256>",
-          "src": "452:49:1"
+          "src": "543:49:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "wordByBytes32",
-          "astId": 73,
+          "astId": 76,
           "type": "t_mapping<t_string>",
-          "src": "507:49:1"
+          "src": "598:49:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "bytes32ForWord",
-          "astId": 77,
+          "astId": 80,
           "type": "t_mapping<t_bytes32>",
-          "src": "562:50:1"
+          "src": "653:50:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "uint256ForBytes32",
-          "astId": 81,
+          "astId": 84,
           "type": "t_mapping<t_bytes32>",
-          "src": "618:54:1"
+          "src": "709:54:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "bytes32ForWordUint256",
-          "astId": 85,
+          "astId": 88,
           "type": "t_mapping<t_uint256>",
-          "src": "678:58:1"
+          "src": "769:58:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "arrayOfBytes32",
-          "astId": 88,
+          "astId": 91,
           "type": "t_array:dyn<t_bytes32>",
-          "src": "760:33:1"
+          "src": "851:33:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "arrayOfUint256",
-          "astId": 91,
+          "astId": 94,
           "type": "t_array:dyn<t_uint256>",
-          "src": "799:33:1"
+          "src": "890:33:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "arrayOfWords",
-          "astId": 94,
+          "astId": 97,
           "type": "t_array:dyn<t_string>",
-          "src": "838:30:1"
+          "src": "929:30:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "wordFrequency",
-          "astId": 98,
+          "astId": 101,
           "type": "t_mapping<t_uint256>",
-          "src": "896:48:1"
+          "src": "987:48:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "totalWords",
-          "astId": 100,
+          "astId": 103,
           "type": "t_uint256",
-          "src": "950:25:1"
+          "src": "1041:25:1"
         },
         {
           "contract": "Storage",
           "path": "contracts/Storage.sol",
           "label": "language",
-          "astId": 102,
+          "astId": 105,
           "type": "t_string",
-          "src": "981:22:1"
+          "src": "1072:22:1"
         }
       ],
       "warnings": {
@@ -205,11 +218,11 @@
       }
     },
     "StorageBuilder": {
-      "address": "0xA89ADE32001E7b45C78D33225C1258c6368fAe96",
-      "constructorCode": "608060405234801561001057600080fd5b506116a4806100206000396000f3fe",
-      "bodyBytecodeHash": "e783cb6080680a18006fe7709cbab9e20ef8ad2d705c781f3add52cb2c23042f",
-      "localBytecodeHash": "780f9870e6adda7ea9687bca25e82b9bbb1a7dbb52c867fe337fd35c04e90b22",
-      "deployedBytecodeHash": "780f9870e6adda7ea9687bca25e82b9bbb1a7dbb52c867fe337fd35c04e90b22",
+      "address": "0xA06CeF3aaB8181d407e6C9B65fa25576b83A6bF4",
+      "constructorCode": "608060405234801561001057600080fd5b50611818806100206000396000f3fe",
+      "bodyBytecodeHash": "5ffbea0d64b5dd886570a53a1508f343649b72d07250b58c4dfee6ecdbf6dc14",
+      "localBytecodeHash": "f3f880317bdf3c7c56bf2bb429a08dd8d6f110ec59eec7e35a33b6af02fb9465",
+      "deployedBytecodeHash": "f3f880317bdf3c7c56bf2bb429a08dd8d6f110ec59eec7e35a33b6af02fb9465",
       "types": {
         "t_address": {
           "id": "t_address",
@@ -241,17 +254,17 @@
           "contract": "StorageBuilder",
           "path": "contracts/StorageBuilder.sol",
           "label": "storageLocations",
-          "astId": 296,
+          "astId": 306,
           "type": "t_array:dyn<t_address>",
-          "src": "96:33:2"
+          "src": "155:33:2"
         },
         {
           "contract": "StorageBuilder",
           "path": "contracts/StorageBuilder.sol",
           "label": "languages",
-          "astId": 299,
+          "astId": 309,
           "type": "t_array:dyn<t_string>",
-          "src": "135:25:2"
+          "src": "194:25:2"
         }
       ],
       "warnings": {
@@ -263,11 +276,11 @@
       }
     },
     "WordDao": {
-      "address": "0x58ADc87Cc11F6beF73094f0d85aBC53b3936265a",
-      "constructorCode": "608060405234801561001057600080fd5b50612a4b806100206000396000f3fe",
-      "bodyBytecodeHash": "549dfe1361e3d781adff084ea914a0b9e60081c01312434f2dea554f3ac63107",
-      "localBytecodeHash": "db210c505747282d723763cf60913b0f5ad759a56bb09a9b3e22d11598388229",
-      "deployedBytecodeHash": "db210c505747282d723763cf60913b0f5ad759a56bb09a9b3e22d11598388229",
+      "address": "0x40F6F052A347FFFB87153E3C1e08ad07431EFE36",
+      "constructorCode": "608060405234801561001057600080fd5b506132b6806100206000396000f3fe",
+      "bodyBytecodeHash": "fd9abd8db203f9b56c653e6c6847f911fe29105ec1dcf5a9d9042574cd9cbb59",
+      "localBytecodeHash": "85eb10777e8dcc03eb812651605204b728de3f56a02a9a988b4c455cfd01f959",
+      "deployedBytecodeHash": "85eb10777e8dcc03eb812651605204b728de3f56a02a9a988b4c455cfd01f959",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -297,6 +310,18 @@
           "length": "dyn",
           "kind": "array",
           "label": "address[]"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_array:dyn<t_string>": {
+          "id": "t_array:dyn<t_string>",
+          "valueType": "t_string",
+          "length": "dyn",
+          "kind": "array",
+          "label": "string[]"
         }
       },
       "storage": [
@@ -304,7 +329,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initialized",
-          "astId": 1056,
+          "astId": 1131,
           "type": "t_bool",
           "src": "757:24:7"
         },
@@ -312,7 +337,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initializing",
-          "astId": 1058,
+          "astId": 1133,
           "type": "t_bool",
           "src": "876:25:7"
         },
@@ -320,7 +345,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "______gap",
-          "astId": 1107,
+          "astId": 1182,
           "type": "t_array:50<t_uint256>",
           "src": "1891:29:7"
         },
@@ -328,25 +353,41 @@
           "contract": "WordDao",
           "path": "contracts/WordDao.sol",
           "label": "erc20",
-          "astId": 392,
+          "astId": 408,
           "type": "t_address",
           "src": "302:18:3"
         },
         {
           "contract": "WordDao",
           "path": "contracts/WordDao.sol",
-          "label": "dataBank",
-          "astId": 395,
+          "label": "tokenAddresses",
+          "astId": 411,
           "type": "t_array:dyn<t_address>",
-          "src": "326:25:3"
+          "src": "386:29:3"
+        },
+        {
+          "contract": "WordDao",
+          "path": "contracts/WordDao.sol",
+          "label": "DaoList",
+          "astId": 414,
+          "type": "t_array:dyn<t_string>",
+          "src": "421:23:3"
+        },
+        {
+          "contract": "WordDao",
+          "path": "contracts/WordDao.sol",
+          "label": "dataBanks",
+          "astId": 417,
+          "type": "t_array:dyn<t_address>",
+          "src": "450:26:3"
         },
         {
           "contract": "WordDao",
           "path": "contracts/WordDao.sol",
           "label": "dataBankBuilder",
-          "astId": 397,
+          "astId": 419,
           "type": "t_address",
-          "src": "357:37:3"
+          "src": "484:37:3"
         }
       ],
       "warnings": {
@@ -359,25 +400,14 @@
     }
   },
   "solidityLibs": {},
-  "proxies": {
-    "word-dao/WordDao": [
-      {
-        "address": "0xa00d112fadFE032A8eF8A64448a9E9F7233d71D9",
-        "version": "0.1.0",
-        "implementation": "0x58ADc87Cc11F6beF73094f0d85aBC53b3936265a"
-      }
-    ]
-  },
+  "proxies": {},
   "zosversion": "2.2",
-  "version": "0.1.0",
   "dependencies": {
     "openzeppelin-eth": {
-      "package": "0x403a7956f577dA30eE0B8Ec44B1a181156eEBae9",
+      "package": "0x197ae635759A2E2a0Cc617A1D41E71c0cF7b39cD",
       "version": "2.1.3",
       "customDeploy": true
     }
   },
-  "proxyAdmin": {
-    "address": "0x94CBE10B5C5988e3456C572eF092e9D215af627C"
-  }
+  "version": "0.1.0"
 }
