@@ -277,7 +277,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 291,
-        "sourceUnit": 1179,
+        "sourceUnit": 1201,
         "src": "25:45:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -291,10 +291,10 @@
               "id": 60,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1178,
+              "referencedDeclaration": 1200,
               "src": "92:13:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$1178",
+                "typeIdentifier": "t_contract$_Initializable_$1200",
                 "typeString": "contract Initializable"
               }
             },
@@ -304,7 +304,7 @@
           }
         ],
         "contractDependencies": [
-          1178
+          1200
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -312,7 +312,7 @@
         "id": 290,
         "linearizedBaseContracts": [
           290,
-          1178
+          1200
         ],
         "name": "Storage",
         "nodeType": "ContractDefinition",
@@ -1054,7 +1054,7 @@
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1159,
+                  "referencedDeclaration": 1181,
                   "src": "1375:11:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1184,7 +1184,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1180,
+                            "referencedDeclaration": 1202,
                             "src": "1616:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -1231,7 +1231,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1209,
                       "src": "1606:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1928,7 +1928,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1193,
+                          "referencedDeclaration": 1215,
                           "src": "2114:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3046,7 +3046,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 291,
-        "sourceUnit": 1179,
+        "sourceUnit": 1201,
         "src": "25:45:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3060,10 +3060,10 @@
               "id": 60,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1178,
+              "referencedDeclaration": 1200,
               "src": "92:13:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$1178",
+                "typeIdentifier": "t_contract$_Initializable_$1200",
                 "typeString": "contract Initializable"
               }
             },
@@ -3073,7 +3073,7 @@
           }
         ],
         "contractDependencies": [
-          1178
+          1200
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -3081,7 +3081,7 @@
         "id": 290,
         "linearizedBaseContracts": [
           290,
-          1178
+          1200
         ],
         "name": "Storage",
         "nodeType": "ContractDefinition",
@@ -3823,7 +3823,7 @@
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1159,
+                  "referencedDeclaration": 1181,
                   "src": "1375:11:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -3953,7 +3953,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1180,
+                            "referencedDeclaration": 1202,
                             "src": "1616:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -4000,7 +4000,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1209,
                       "src": "1606:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4697,7 +4697,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1193,
+                          "referencedDeclaration": 1215,
                           "src": "2114:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5794,7 +5794,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-03-14T14:16:53.071Z",
+  "updatedAt": "2019-03-14T14:26:49.761Z",
   "devdoc": {
     "methods": {}
   },
