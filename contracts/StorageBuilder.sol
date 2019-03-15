@@ -21,12 +21,12 @@ contract StorageBuilder {
     
 
     //require an address
-    function deployStorage(string calldata _language, ERC20 _tokenAddress) external returns(Storage){
+    function deployStorage(string memory _language, string memory _symbol, address[] memory _minters, address[] memory _pausers, address[] memory _signAuthority) public returns(Storage){
         Storage c = new Storage();
-        c.initialize(_language, _tokenAddress);
+        address tokenAddress = c.initialize(_language, _symbol, _minters, _pausers, _signAuthority);
         languages.push(_language);
         storageLocations.push(address(c));
-        emit storageCreated(address(c), _language, address(_tokenAddress));
+        emit storageCreated(address(c), _language, address(tokenAddress));
         return c;
     }
 }

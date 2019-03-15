@@ -7,7 +7,10 @@ import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
 
 contract Storage is Initializable {
 
-    StandaloneERC20 public tokenAddress;
+    StandaloneERC20 public erc20;
+
+    address[] public signAuthority;
+    mapping(address => bool) public hasAuthorityToSign;
     
     //modifyer to check if Uint is valid
     //modifyer to check if Bytes32 is valid
@@ -46,12 +49,45 @@ contract Storage is Initializable {
     event wordRequested(
         uint256 _wordNumber,
         address indexed _from);
-        
-    function initialize(string memory _language, StandaloneERC20 _tokenAddress) initializer public {
-        require(isContract(address(_tokenAddress)));
+
+    //Storage Created
+    event storageCreated(
+        string _language,
+        address _contractAddress,
+        address _erc20TokenAddress
+    );
+       
+        address[] public minters; 
+        address[] public pausers;
+
+    function initialize(string memory _language, string memory _symbol, address[] memory _minters, address[] memory _pausers, address[] memory _signAuthority) initializer public returns(address){
+
+        //Add Sign Authorities to Array
+        for(uint i=0; i<= _signAuthority.length; i++){
+            signAuthority.push(_signAuthority[i]);
+            hasAuthorityToSign[_signAuthority[i]] = true;
+        }
+
+        minters.push(address(this));
+        pausers.push(address(this));
+
+        for(uint i=0; i<= _minters.length; i++){
+            minters.push(_minters[i]);
+        }
+
+        for(uint i=0; i<= _pausers.length; i++){
+            pausers.push(_pausers[i]);
+
+        }
+
+        erc20 = new StandaloneERC20();
+        erc20.initialize(_language, _symbol, 18, 0, address(this), minters, pausers);
 
         language = _language;
-        tokenAddress = _tokenAddress;
+
+        emit storageCreated(_language, address(this), address(erc20));
+
+        return(address(erc20));
     }
     
     //WordSetter
@@ -106,7 +142,7 @@ contract Storage is Initializable {
 
     //Utils
 
-    function isContract(address _addr) private returns (bool status){
+    function isContract(address _addr) private view returns (bool status){
         uint32 size;
         assembly {
             size := extcodesize(_addr)
