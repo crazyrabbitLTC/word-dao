@@ -410,7 +410,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 467,
-        "sourceUnit": 2242,
+        "sourceUnit": 2240,
         "src": "25:45:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -421,7 +421,7 @@
         "id": 60,
         "nodeType": "ImportDirective",
         "scope": 467,
-        "sourceUnit": 2179,
+        "sourceUnit": 2177,
         "src": "132:68:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -435,10 +435,10 @@
               "id": 61,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2241,
+              "referencedDeclaration": 2239,
               "src": "223:13:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$2241",
+                "typeIdentifier": "t_contract$_Initializable_$2239",
                 "typeString": "contract Initializable"
               }
             },
@@ -448,8 +448,8 @@
           }
         ],
         "contractDependencies": [
-          2178,
-          2241
+          2176,
+          2239
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -457,7 +457,7 @@
         "id": 466,
         "linearizedBaseContracts": [
           466,
-          2241
+          2239
         ],
         "name": "Storage",
         "nodeType": "ContractDefinition",
@@ -472,7 +472,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
               "typeString": "contract StandaloneERC20"
             },
             "typeName": {
@@ -480,10 +480,10 @@
               "id": 63,
               "name": "StandaloneERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2178,
+              "referencedDeclaration": 2176,
               "src": "244:15:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                 "typeString": "contract StandaloneERC20"
               }
             },
@@ -1795,7 +1795,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2246:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -1903,7 +1903,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2283:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -2531,7 +2531,7 @@
                       "referencedDeclaration": 64,
                       "src": "2499:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                        "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                         "typeString": "contract StandaloneERC20"
                       }
                     },
@@ -2550,7 +2550,7 @@
                         "nodeType": "NewExpression",
                         "src": "2507:19:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_StandaloneERC20_$2178_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_StandaloneERC20_$2176_$",
                           "typeString": "function () returns (contract StandaloneERC20)"
                         },
                         "typeName": {
@@ -2558,10 +2558,10 @@
                           "id": 250,
                           "name": "StandaloneERC20",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2178,
+                          "referencedDeclaration": 2176,
                           "src": "2511:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                            "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                             "typeString": "contract StandaloneERC20"
                           }
                         }
@@ -2576,13 +2576,13 @@
                       "nodeType": "FunctionCall",
                       "src": "2507:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                        "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                         "typeString": "contract StandaloneERC20"
                       }
                     },
                     "src": "2499:29:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                      "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                       "typeString": "contract StandaloneERC20"
                     }
                   },
@@ -2665,7 +2665,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2590:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -2774,7 +2774,7 @@
                         "referencedDeclaration": 64,
                         "src": "2538:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                          "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                           "typeString": "contract StandaloneERC20"
                         }
                       },
@@ -2785,7 +2785,7 @@
                       "lValueRequested": false,
                       "memberName": "initialize",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2085,
+                      "referencedDeclaration": 2083,
                       "src": "2538:16:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint8_$_t_uint256_$_t_address_$_t_array$_t_address_$dyn_memory_ptr_$_t_array$_t_address_$dyn_memory_ptr_$returns$__$",
@@ -2882,7 +2882,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2695:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -2936,7 +2936,7 @@
                             "referencedDeclaration": 64,
                             "src": "2710:5:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           }
@@ -2944,7 +2944,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           ],
@@ -3036,7 +3036,7 @@
                             "referencedDeclaration": 64,
                             "src": "2743:5:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           }
@@ -3044,7 +3044,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           ],
@@ -3110,7 +3110,7 @@
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2222,
+                  "referencedDeclaration": 2220,
                   "src": "1964:11:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -3405,7 +3405,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2243,
+                            "referencedDeclaration": 2241,
                             "src": "2942:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -3452,7 +3452,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2250,
+                      "referencedDeclaration": 2248,
                       "src": "2932:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4149,7 +4149,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2256,
+                          "referencedDeclaration": 2254,
                           "src": "3440:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5491,7 +5491,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 467,
-        "sourceUnit": 2242,
+        "sourceUnit": 2240,
         "src": "25:45:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -5502,7 +5502,7 @@
         "id": 60,
         "nodeType": "ImportDirective",
         "scope": 467,
-        "sourceUnit": 2179,
+        "sourceUnit": 2177,
         "src": "132:68:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -5516,10 +5516,10 @@
               "id": 61,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2241,
+              "referencedDeclaration": 2239,
               "src": "223:13:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$2241",
+                "typeIdentifier": "t_contract$_Initializable_$2239",
                 "typeString": "contract Initializable"
               }
             },
@@ -5529,8 +5529,8 @@
           }
         ],
         "contractDependencies": [
-          2178,
-          2241
+          2176,
+          2239
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -5538,7 +5538,7 @@
         "id": 466,
         "linearizedBaseContracts": [
           466,
-          2241
+          2239
         ],
         "name": "Storage",
         "nodeType": "ContractDefinition",
@@ -5553,7 +5553,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
               "typeString": "contract StandaloneERC20"
             },
             "typeName": {
@@ -5561,10 +5561,10 @@
               "id": 63,
               "name": "StandaloneERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2178,
+              "referencedDeclaration": 2176,
               "src": "244:15:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                 "typeString": "contract StandaloneERC20"
               }
             },
@@ -6876,7 +6876,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2246:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -6984,7 +6984,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2283:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -7612,7 +7612,7 @@
                       "referencedDeclaration": 64,
                       "src": "2499:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                        "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                         "typeString": "contract StandaloneERC20"
                       }
                     },
@@ -7631,7 +7631,7 @@
                         "nodeType": "NewExpression",
                         "src": "2507:19:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_StandaloneERC20_$2178_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_StandaloneERC20_$2176_$",
                           "typeString": "function () returns (contract StandaloneERC20)"
                         },
                         "typeName": {
@@ -7639,10 +7639,10 @@
                           "id": 250,
                           "name": "StandaloneERC20",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2178,
+                          "referencedDeclaration": 2176,
                           "src": "2511:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                            "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                             "typeString": "contract StandaloneERC20"
                           }
                         }
@@ -7657,13 +7657,13 @@
                       "nodeType": "FunctionCall",
                       "src": "2507:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                        "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                         "typeString": "contract StandaloneERC20"
                       }
                     },
                     "src": "2499:29:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                      "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                       "typeString": "contract StandaloneERC20"
                     }
                   },
@@ -7746,7 +7746,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2590:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -7855,7 +7855,7 @@
                         "referencedDeclaration": 64,
                         "src": "2538:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                          "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                           "typeString": "contract StandaloneERC20"
                         }
                       },
@@ -7866,7 +7866,7 @@
                       "lValueRequested": false,
                       "memberName": "initialize",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2085,
+                      "referencedDeclaration": 2083,
                       "src": "2538:16:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint8_$_t_uint256_$_t_address_$_t_array$_t_address_$dyn_memory_ptr_$_t_array$_t_address_$dyn_memory_ptr_$returns$__$",
@@ -7963,7 +7963,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2295,
+                            "referencedDeclaration": 2293,
                             "src": "2695:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Storage_$466",
@@ -8017,7 +8017,7 @@
                             "referencedDeclaration": 64,
                             "src": "2710:5:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           }
@@ -8025,7 +8025,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           ],
@@ -8117,7 +8117,7 @@
                             "referencedDeclaration": 64,
                             "src": "2743:5:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           }
@@ -8125,7 +8125,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_StandaloneERC20_$2178",
+                              "typeIdentifier": "t_contract$_StandaloneERC20_$2176",
                               "typeString": "contract StandaloneERC20"
                             }
                           ],
@@ -8191,7 +8191,7 @@
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2222,
+                  "referencedDeclaration": 2220,
                   "src": "1964:11:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -8486,7 +8486,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2243,
+                            "referencedDeclaration": 2241,
                             "src": "2942:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -8533,7 +8533,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2250,
+                      "referencedDeclaration": 2248,
                       "src": "2932:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -9230,7 +9230,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2256,
+                          "referencedDeclaration": 2254,
                           "src": "3440:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -10551,7 +10551,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-03-15T15:20:35.725Z",
+  "updatedAt": "2019-03-15T15:29:01.052Z",
   "devdoc": {
     "methods": {}
   },

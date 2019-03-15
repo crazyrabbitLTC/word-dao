@@ -10,6 +10,7 @@ const StorageBuilder = Contracts.getFromLocal("StorageBuilder");
 const StorageContract = Contracts.getFromLocal("Storage");
 const WordDaoMaster = Contracts.getFromLocal("WordDao");
 const ERC20 = artifacts.require("ERC20");
+const StorageInterface = artifacts.require("Storage");
 
 contract("StorageBuilder", function(accounts) {
   //let builderInstance;
@@ -184,18 +185,22 @@ contract("WordDao", function(accounts) {
 });
 
 contract("Storage", function(accounts) {
-  //let storageInstance;
-  //let erc20Instance;
+
   const language = "english";
+  const symbol = "WDENG";
+  const minters = ['0x1eeb9c468707f270f82ba0e04cb413f0af42d094','0xf9cb4c64d9eab3590c3ab96dd7f9986dce293d09'];
+  const pausers = minters;
+  const signers = minters;
 
   before(async function() {
     this.project = await TestHelper();
-    this.erc20Instance = await ERC20.deployed();
-    console.log(this.erc20Instance.methods);
-    // storageInstance = await this.project.createProxy(WordDaoMaster, {
-    //   initMethod: "initialize",
-    //   initArgs: []
-    // });
+
+    //create Storge builder
+    this.storageBuilder = await this.project.createProxy(StorageBuilder);
+    this.storage = await this.storageBuilder.methods.deployStorage(language,symbol,minters,pausers,signers).send({from: accounts[0], gas: 6000000});
+
+    console.log(this.storage.address);
+
   });
 
 });

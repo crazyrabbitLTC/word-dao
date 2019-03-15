@@ -5,7 +5,7 @@ import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
 
 contract StorageBuilder {
     
-    address[] public storageLocations;
+    Storage[] public storageLocations;
     string[] public languages;
 
     event storageCreated(address indexed _address, string _language, address _tokenAddress);
@@ -25,7 +25,7 @@ contract StorageBuilder {
         Storage c = new Storage();
         address tokenAddress = c.initialize(_language, _symbol, _minters, _pausers, _signAuthority);
         languages.push(_language);
-        storageLocations.push(address(c));
+        storageLocations.push(c);
         emit storageCreated(address(c), _language, address(tokenAddress));
         return c;
     }
