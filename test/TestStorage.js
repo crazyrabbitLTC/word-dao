@@ -177,13 +177,16 @@ contract("Storage", function(accounts) {
   before(async function() {
     this.project = await TestHelper();
     erc20Instance = await ERC20.deployed();
-    console.log(erc20Instance);
     // storageInstance = await this.project.createProxy(WordDaoMaster, {
     //   initMethod: "initialize",
     //   initArgs: []
     // });
   });
 
+  it("Deploys and ERC20", async function() {
+
+    console.log(erc20Instance);
+  })
 
   
 });
