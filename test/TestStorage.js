@@ -9,8 +9,9 @@ require("chai").should();
 const StorageBuilder = Contracts.getFromLocal("StorageBuilder");
 const StorageContract = Contracts.getFromLocal("Storage");
 const WordDaoMaster = Contracts.getFromLocal("WordDao");
+const ERC20 = artifacts.require("ERC20");
 
-contract("builder", function(accounts) {
+contract("StorageBuilder", function(accounts) {
   //let builderInstance;
 
   beforeEach(async function() {
@@ -140,21 +141,49 @@ contract("builder", function(accounts) {
   });
 });
 
-contract("WordDao", function(accounts){
-
+contract("WordDao", function(accounts) {
   let daoInstance;
   const language = "english";
 
   beforeEach(async function() {
     this.project = await TestHelper();
-    daoInstance = await this.project.createProxy(WordDaoMaster, {initMethod: 'initialize', initArgs: []});
+    daoInstance = await this.project.createProxy(WordDaoMaster, {
+      initMethod: "initialize",
+      initArgs: []
+    });
   });
 
-  it("Should deploy a WordDao", async function () {
-    
-    const thisDao = await daoInstance.methods.createWordDao(language).send({from: accounts[0], gas: 5000000});
+  xit("Should deploy a WordDao", async function() {
+    const thisDao = await daoInstance.methods
+      .createWordDao(language)
+      .send({ from: accounts[0], gas: 5000000 });
     console.log(thisDao);
-    
   });
 
+  xit("Should deploy an upgradable StorageBuilder", async function() {
+    const result = await daoInstance.methods
+      .createInstance("0x0", "Test Dow")
+      .send({ from: accounts[0], gas: 6000000 });
+    console.log(daoInstance.methods);
+    console.log(result);
+  });
+});
+
+contract("Storage", function(accounts) {
+  let storageInstance;
+  let erc20Instance;
+  const language = "english";
+
+  before(async function() {
+    this.project = await TestHelper();
+    erc20Instance = await ERC20.deployed();
+    console.log(erc20Instance);
+    // storageInstance = await this.project.createProxy(WordDaoMaster, {
+    //   initMethod: "initialize",
+    //   initArgs: []
+    // });
+  });
+
+
+  
 });

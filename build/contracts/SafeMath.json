@@ -308,10 +308,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "605:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -534,10 +534,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "921:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -836,10 +836,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "1282:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1219,10 +1219,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "1535:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1445,10 +1445,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "1805:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1939,10 +1939,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "605:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2165,10 +2165,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "921:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2467,10 +2467,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "1282:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2850,10 +2850,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "1535:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3076,10 +3076,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1201,
-                        1202
+                        1208,
+                        1209
                       ],
-                      "referencedDeclaration": 1201,
+                      "referencedDeclaration": 1208,
                       "src": "1805:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3275,7 +3275,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-03-14T18:59:44.448Z",
+  "updatedAt": "2019-03-15T13:27:06.279Z",
   "devdoc": {
     "details": "Unsigned math operations with safety checks that revert on error",
     "methods": {},
