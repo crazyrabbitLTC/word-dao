@@ -14,9 +14,23 @@ const ERC20 = artifacts.require("ERC20");
 contract("StorageBuilder", function(accounts) {
   //let builderInstance;
 
+  
   beforeEach(async function() {
     this.project = await TestHelper();
+    this.erc20Instance = await ERC20.deployed();
+    this.language = "English"
+
     //builderInstance = await this.project.createProxy(StorageBuilder);
+  });
+
+  it("Deploys a Storage", async function() {
+    const erc20Address = this.erc20Instance.address;
+    const storageInstance = await this.project.createProxy(StorageContract, {
+      initMethod: "initialize",
+      initArgs: [this.language, erc20Address]
+    });
+
+    assert.isTrue(web3.utils.isAddress(storageInstance.address));
   });
 
   xit("Should have no languages at first deploy", async function() {
@@ -170,23 +184,18 @@ contract("WordDao", function(accounts) {
 });
 
 contract("Storage", function(accounts) {
-  let storageInstance;
-  let erc20Instance;
+  //let storageInstance;
+  //let erc20Instance;
   const language = "english";
 
   before(async function() {
     this.project = await TestHelper();
-    erc20Instance = await ERC20.deployed();
+    this.erc20Instance = await ERC20.deployed();
+    console.log(this.erc20Instance.methods);
     // storageInstance = await this.project.createProxy(WordDaoMaster, {
     //   initMethod: "initialize",
     //   initArgs: []
     // });
   });
 
-  it("Deploys and ERC20", async function() {
-
-    console.log(erc20Instance);
-  })
-
-  
 });

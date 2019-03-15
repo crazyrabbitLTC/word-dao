@@ -1,11 +1,13 @@
 pragma solidity ^0.5.0;
 
 import "zos-lib/contracts/Initializable.sol";
-import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
+//import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
+
 
 contract Storage is Initializable {
 
-    ERC20 public tokenAddress;
+    StandaloneERC20 public tokenAddress;
     
     //modifyer to check if Uint is valid
     //modifyer to check if Bytes32 is valid
@@ -45,7 +47,9 @@ contract Storage is Initializable {
         uint256 _wordNumber,
         address indexed _from);
         
-    function initialize(string memory _language, ERC20 _tokenAddress) initializer public {
+    function initialize(string memory _language, StandaloneERC20 _tokenAddress) initializer public {
+        require(isContract(address(_tokenAddress)));
+
         language = _language;
         tokenAddress = _tokenAddress;
     }
@@ -99,5 +103,15 @@ contract Storage is Initializable {
     function getWordBytes32ToUint256(bytes32 _wordBytes) view external returns(uint256){
         return bytes32ForWordUint256[_wordBytes];
     }
+
+    //Utils
+
+    function isContract(address _addr) private returns (bool status){
+        uint32 size;
+        assembly {
+            size := extcodesize(_addr)
+        }
+        return (size > 0);
+}
 
 }

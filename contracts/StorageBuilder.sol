@@ -19,6 +19,8 @@ contract StorageBuilder {
         return languages[_index];
     }
     
+
+    //require an address
     function deployStorage(string calldata _language, ERC20 _tokenAddress) external returns(Storage){
         Storage c = new Storage();
         c.initialize(_language, _tokenAddress);
