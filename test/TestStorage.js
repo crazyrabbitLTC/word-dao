@@ -24,7 +24,7 @@ contract("StorageBuilder", function(accounts) {
     //builderInstance = await this.project.createProxy(StorageBuilder);
   });
 
-  it("Deploys a Storage", async function() {
+  xit("Deploys a Storage", async function() {
     const erc20Address = this.erc20Instance.address;
     const storageInstance = await this.project.createProxy(StorageContract, {
       initMethod: "initialize",
@@ -198,9 +198,9 @@ contract("Storage", function(accounts) {
     //create Storge builder
     this.storageBuilder = await this.project.createProxy(StorageBuilder);
     this.storage = await this.storageBuilder.methods.deployStorage(language,symbol,minters,pausers,signers).send({from: accounts[0], gas: 6000000});
-
-    console.log(this.storage.address);
-
   });
 
+  it("Deployes a storage builder and deploys an English Storage", async function () {
+    console.log(this.storage.address);
+  })
 });

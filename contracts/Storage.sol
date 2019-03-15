@@ -61,27 +61,27 @@ contract Storage is Initializable {
         address[] public pausers;
 
     function initialize(string memory _language, string memory _symbol, address[] memory _minters, address[] memory _pausers, address[] memory _signAuthority) initializer public returns(address){
-
+            
         //Add Sign Authorities to Array
-        for(uint i=0; i<= _signAuthority.length; i++){
-            signAuthority.push(_signAuthority[i]);
-            hasAuthorityToSign[_signAuthority[i]] = true;
-        }
+        // for(uint i=0; i<= _signAuthority.length; i++){
+        //     signAuthority.push(_signAuthority[i]);
+        //     hasAuthorityToSign[_signAuthority[i]] = true;
+        // }
 
         minters.push(address(this));
         pausers.push(address(this));
 
-        for(uint i=0; i<= _minters.length; i++){
-            minters.push(_minters[i]);
-        }
+        // for(uint i=0; i<= _minters.length; i++){
+        //     minters.push(_minters[i]);
+        // }
 
-        for(uint i=0; i<= _pausers.length; i++){
-            pausers.push(_pausers[i]);
+        // for(uint i=0; i<= _pausers.length; i++){
+        //     pausers.push(_pausers[i]);
 
-        }
+        // }
 
         erc20 = new StandaloneERC20();
-        erc20.initialize(_language, _symbol, 18, 0, address(this), minters, pausers);
+        erc20.initialize(_language, _symbol, 18, 0, msg.sender, minters, pausers);
 
         language = _language;
 
