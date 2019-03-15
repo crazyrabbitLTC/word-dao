@@ -2,13 +2,13 @@ pragma solidity ^0.5.0;
 
 import "zos-lib/contracts/Initializable.sol";
 import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
-//import "zos-lib/contracts/application/App.sol";
+import "zos-lib/contracts/application/App.sol";
 import "./Storage.sol";
 import "./StorageBuilder.sol";
 
 contract WordDao is Initializable {
 
-    //App public zosApp;
+    App public zosApp;
     ERC20 public erc20;
 
     //This could be a struct array with Dao + tokenAddress
@@ -26,9 +26,8 @@ contract WordDao is Initializable {
     //this function should create an ERC20 and databankbuilder. I should not need to enter the addresses. 
     function initialize() initializer public {
 
-        //zosApp = new App();
-        //Each Dao should make its own token
-        //erc20 = new ERC20();
+        zosApp = new App();
+
 
         //This should be upgradable
         dataBankBuilder = new StorageBuilder();
