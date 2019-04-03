@@ -149,8 +149,10 @@ contract("Token", function(accounts) {
     assert.equal(event[0], language);
   });
 
-  it("should have created a Token for the DaoSTorage", async function(){
-      
+  it("should have created a Token for the DaoSTorage with no supply(yet)", async function(){
+      const token = await ERC20.at(this.tokenAddress);
+      const result = await token.methods.totalSupply().call();
+    assert.equal(result, 0);
   })
 
 
