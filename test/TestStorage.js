@@ -4,7 +4,7 @@ const truffleAssert = require("truffle-assertions");
 
 ZWeb3.initialize(web3.currentProvider);
 
-const Storage = Contracts.getFromLocal("Storage");
+const Storage = Contracts.getFromLocal("DaoStorage");
 const ERC20 = Contracts.getFromNodeModules("openzeppelin-eth", "ERC20");
 const Manager = Contracts.getFromLocal("Manager");
 
@@ -149,11 +149,17 @@ contract("Token", function(accounts) {
     assert.equal(event[0], language);
   });
 
-  it("should have created a Token for the DaoSTorage with no supply(yet)", async function(){
-      const token = await ERC20.at(this.tokenAddress);
-      const result = await token.methods.totalSupply().call();
+  it("should have deployed a token for the DaoSTorage with no supply(yet)", async function() {
+    const token = await ERC20.at(this.tokenAddress);
+    const result = await token.methods.totalSupply().call();
     assert.equal(result, 0);
-  })
+  });
 
+  it("should have deployed a daoStorage for the proper language", async function() {
+    const storage = await Storage.at(this.storageAddress);
+    const result = await storage.methods.language().call();
+    assert.equal(result, storageDefinition.language);
+  });
 
+  
 });
