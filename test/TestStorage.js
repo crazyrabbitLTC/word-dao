@@ -44,12 +44,12 @@ contract("Storage", function(accounts) {
     assert.equal(result, 0);
   });
 
-  xit("should create a proxy for the ERC20", async function() {
-    const proxy = await this.project.createProxy(ERC20, {
-      contractName: "StandaloneERC20",
-      packageName: "openzeppelin-eth"
-    });
-    const result = await proxy.methods.totalSupply().call();
-    result.should.eq("0");
-  });
+  // xit("should create a proxy for the ERC20", async function() {
+  //   const proxy = await this.project.createProxy(ERC20, {
+  //     contractName: "StandaloneERC20",
+  //     packageName: "openzeppelin-eth"
+  //   });
+  //   const result = await proxy.methods.totalSupply().call();
+  //   result.should.eq("0");
+  // });
 });
