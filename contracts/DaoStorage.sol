@@ -4,7 +4,7 @@ import "zos-lib/contracts/Initializable.sol";
 //import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
 
 //The contract should not also manage the token unless it becomes finacially nessesary.
-contract Storage is Initializable {
+contract DaoStorage is Initializable {
 
     //StandaloneERC20 public erc20;
 

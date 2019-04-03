@@ -237,6 +237,100 @@
         "hasInitialValuesInDeclarations": false,
         "uninitializedBaseContracts": []
       }
+    },
+    "Manager": {
+      "address": "0x25f736dad0c9E4b9d5427a99140CB97A908B0F52",
+      "constructorCode": "608060405234801561001057600080fd5b506137ec806100206000396000f3fe",
+      "bodyBytecodeHash": "5fc9f9648eccb4a362464433f344b30a9834ee122ade2f57d280dbe6089f56ec",
+      "localBytecodeHash": "8217f65c1cfbdef29b86a2c3b367dd44c26bc2c8452768a1a24fc7b0fe042ea2",
+      "deployedBytecodeHash": "8217f65c1cfbdef29b86a2c3b367dd44c26bc2c8452768a1a24fc7b0fe042ea2",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_array:dyn<t_address>": {
+          "id": "t_array:dyn<t_address>",
+          "valueType": "t_address",
+          "length": "dyn",
+          "kind": "array",
+          "label": "address[]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 1912,
+          "type": "t_bool",
+          "src": "757:24:14"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 1914,
+          "type": "t_bool",
+          "src": "876:25:14"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 1970,
+          "type": "t_array:50<t_uint256>",
+          "src": "1951:29:14"
+        },
+        {
+          "contract": "Manager",
+          "path": "contracts/Manager.sol",
+          "label": "tokens",
+          "astId": 285,
+          "type": "t_array:dyn<t_address>",
+          "src": "213:23:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [],
+        "storageDiff": [
+          {
+            "action": "append",
+            "updated": {
+              "index": 3,
+              "contract": "Manager",
+              "path": "contracts/Manager.sol",
+              "label": "tokens",
+              "astId": 285,
+              "type": "t_array:dyn<t_address>",
+              "src": "213:23:1"
+            }
+          }
+        ]
+      }
     }
   },
   "solidityLibs": {},
@@ -247,11 +341,30 @@
         "version": "0.1.0",
         "implementation": "0x64F4D8203aaB8ec9218bc0A39Abfb671ACA6d023"
       }
+    ],
+    "word-dao/Manager": [
+      {
+        "address": "0xF5D9ac22213Aba24e1D8a46D6F824F037ddA321C",
+        "version": "0.1.0",
+        "implementation": "0x25f736dad0c9E4b9d5427a99140CB97A908B0F52"
+      },
+      {
+        "address": "0xC8EEDD513809b207B7D10f629f404BB5c74762FC",
+        "version": "0.1.0",
+        "implementation": "0x25f736dad0c9E4b9d5427a99140CB97A908B0F52"
+      }
     ]
   },
   "zosversion": "2.2",
   "version": "0.1.0",
   "proxyAdmin": {
     "address": "0xc371Da06B8158b3D6a9A8D2afcDa25cE201290ad"
+  },
+  "dependencies": {
+    "openzeppelin-eth": {
+      "package": "0x9AAAB1d345798d298D53Ed0986d716684139cB0c",
+      "version": "2.1.3",
+      "customDeploy": true
+    }
   }
 }
