@@ -3,9 +3,7 @@
   "name": "word-dao",
   "version": "0.1.0",
   "contracts": {
-    "Storage": "Storage",
-    "StorageBuilder": "StorageBuilder",
-    "WordDao": "WordDao"
+    "Storage": "Storage"
   },
   "dependencies": {
     "openzeppelin-eth": "^2.1.3"

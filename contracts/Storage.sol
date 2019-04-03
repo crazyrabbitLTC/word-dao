@@ -1,13 +1,12 @@
 pragma solidity ^0.5.0;
 
 import "zos-lib/contracts/Initializable.sol";
-//import "openzeppelin-eth/contracts/token/ERC20/ERC20.sol";
-import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
+//import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
 
-
+//The contract should not also manage the token unless it becomes finacially nessesary.
 contract Storage is Initializable {
 
-    StandaloneERC20 public erc20;
+    //StandaloneERC20 public erc20;
 
     address[] public signAuthority;
     mapping(address => bool) public hasAuthorityToSign;
@@ -17,6 +16,7 @@ contract Storage is Initializable {
     //modifyer to check if String is valid
     
     //Note: To make this contract general, maybe you can have an intializer which sets which are relevant.
+    //To limit the calls to only the manager contract a modifyer should be created to limit all paid calls.
     
     //Store words based on Integers
     mapping(uint256 => string) internal wordByNumber;
@@ -53,41 +53,12 @@ contract Storage is Initializable {
     //Storage Created
     event storageCreated(
         string _language,
-        address _contractAddress,
-        address _erc20TokenAddress
+        address _contractAddress
     );
        
-        address[] public minters; 
-        address[] public pausers;
-
-    function initialize(string memory _language, string memory _symbol, address[] memory _minters, address[] memory _pausers, address[] memory _signAuthority) initializer public returns(address){
-            
-        //Add Sign Authorities to Array
-        // for(uint i=0; i<= _signAuthority.length; i++){
-        //     signAuthority.push(_signAuthority[i]);
-        //     hasAuthorityToSign[_signAuthority[i]] = true;
-        // }
-
-        minters.push(address(this));
-        pausers.push(address(this));
-
-        // for(uint i=0; i<= _minters.length; i++){
-        //     minters.push(_minters[i]);
-        // }
-
-        // for(uint i=0; i<= _pausers.length; i++){
-        //     pausers.push(_pausers[i]);
-
-        // }
-
-        erc20 = new StandaloneERC20();
-        erc20.initialize(_language, _symbol, 18, 0, msg.sender, minters, pausers);
-
+    function initialize(string memory _language) initializer public returns(address){
         language = _language;
-
-        emit storageCreated(_language, address(this), address(erc20));
-
-        return(address(erc20));
+        emit storageCreated(language, address(this));
     }
     
     //WordSetter

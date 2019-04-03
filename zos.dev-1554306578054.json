@@ -1,0 +1,257 @@
+{
+  "contracts": {
+    "Storage": {
+      "address": "0x64F4D8203aaB8ec9218bc0A39Abfb671ACA6d023",
+      "constructorCode": "608060405234801561001057600080fd5b506110ae806100206000396000f3fe",
+      "bodyBytecodeHash": "3de04b668318eaaf02ab4fb45f18c328aca0f19011b6516c360450762fd57ebd",
+      "localBytecodeHash": "ac723679109c66516655ddcae8666d51ece14eb19798ea079d3ddadc83612706",
+      "deployedBytecodeHash": "ac723679109c66516655ddcae8666d51ece14eb19798ea079d3ddadc83612706",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_array:dyn<t_address>": {
+          "id": "t_array:dyn<t_address>",
+          "valueType": "t_address",
+          "length": "dyn",
+          "kind": "array",
+          "label": "address[]"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_string>": {
+          "id": "t_mapping<t_string>",
+          "valueType": "t_string",
+          "label": "mapping(key => string)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_bytes32": {
+          "id": "t_bytes32",
+          "kind": "elementary",
+          "label": "bytes32"
+        },
+        "t_mapping<t_bytes32>": {
+          "id": "t_mapping<t_bytes32>",
+          "valueType": "t_bytes32",
+          "label": "mapping(key => bytes32)",
+          "kind": "mapping"
+        },
+        "t_array:dyn<t_bytes32>": {
+          "id": "t_array:dyn<t_bytes32>",
+          "valueType": "t_bytes32",
+          "length": "dyn",
+          "kind": "array",
+          "label": "bytes32[]"
+        },
+        "t_array:dyn<t_uint256>": {
+          "id": "t_array:dyn<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "dyn",
+          "kind": "array",
+          "label": "uint256[]"
+        },
+        "t_array:dyn<t_string>": {
+          "id": "t_array:dyn<t_string>",
+          "valueType": "t_string",
+          "length": "dyn",
+          "kind": "array",
+          "label": "string[]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 333,
+          "type": "t_bool",
+          "src": "757:24:2"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 335,
+          "type": "t_bool",
+          "src": "876:25:2"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 391,
+          "type": "t_array:50<t_uint256>",
+          "src": "1951:29:2"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "signAuthority",
+          "astId": 64,
+          "type": "t_array:dyn<t_address>",
+          "src": "309:30:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "hasAuthorityToSign",
+          "astId": 68,
+          "type": "t_mapping<t_bool>",
+          "src": "345:50:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "wordByNumber",
+          "astId": 72,
+          "type": "t_mapping<t_string>",
+          "src": "795:48:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "numberForWord",
+          "astId": 76,
+          "type": "t_mapping<t_uint256>",
+          "src": "849:49:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "wordByBytes32",
+          "astId": 80,
+          "type": "t_mapping<t_string>",
+          "src": "904:49:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "bytes32ForWord",
+          "astId": 84,
+          "type": "t_mapping<t_bytes32>",
+          "src": "959:50:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "uint256ForBytes32",
+          "astId": 88,
+          "type": "t_mapping<t_bytes32>",
+          "src": "1015:54:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "bytes32ForWordUint256",
+          "astId": 92,
+          "type": "t_mapping<t_uint256>",
+          "src": "1075:58:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "arrayOfBytes32",
+          "astId": 95,
+          "type": "t_array:dyn<t_bytes32>",
+          "src": "1157:33:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "arrayOfUint256",
+          "astId": 98,
+          "type": "t_array:dyn<t_uint256>",
+          "src": "1196:33:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "arrayOfWords",
+          "astId": 101,
+          "type": "t_array:dyn<t_string>",
+          "src": "1235:30:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "wordFrequency",
+          "astId": 105,
+          "type": "t_mapping<t_uint256>",
+          "src": "1293:48:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "totalWords",
+          "astId": 107,
+          "type": "t_uint256",
+          "src": "1347:25:1"
+        },
+        {
+          "contract": "Storage",
+          "path": "contracts/Storage.sol",
+          "label": "language",
+          "astId": 109,
+          "type": "t_string",
+          "src": "1378:22:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "word-dao/Storage": [
+      {
+        "address": "0x7d759D3b1309589FC61D4Ccf91Fa5A4Fc2D81E65",
+        "version": "0.1.0",
+        "implementation": "0x64F4D8203aaB8ec9218bc0A39Abfb671ACA6d023"
+      }
+    ]
+  },
+  "zosversion": "2.2",
+  "version": "0.1.0",
+  "proxyAdmin": {
+    "address": "0xc371Da06B8158b3D6a9A8D2afcDa25cE201290ad"
+  }
+}
