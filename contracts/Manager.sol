@@ -2,7 +2,7 @@ pragma solidity ^0.5.0;
 
 import "zos-lib/contracts/Initializable.sol";
 import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
-import "./DaoStorage";
+import "./DaoStorage.sol";
 
 contract Manager is Initializable {
 
@@ -14,7 +14,7 @@ contract Manager is Initializable {
         address _daoStorage;
     }
 
-   WordDao[] wordDaos;
+   WordDao[] public wordDaos;
     
     function createStorage(string memory _language, string memory _name, string memory _symbol, 
     uint8 _decimals, uint256 _initialSupply, address _initialHolder, address[] memory _minters, 
