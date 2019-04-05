@@ -3365,7 +3365,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-04-05T14:53:56.782Z",
+  "updatedAt": "2019-04-05T15:06:43.059Z",
   "devdoc": {
     "details": "ERC20 modified with pausable transfers.*",
     "methods": {
