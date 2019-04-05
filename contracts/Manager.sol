@@ -12,7 +12,7 @@ contract Manager is Initializable {
     DaoStorage public daoStorage;
     string public daoLanguage;
 
-    
+
     function createStorage(string memory _language, string memory _name, string memory _symbol, 
     uint8 _decimals, uint256 _initialSupply, address _initialHolder, address[] memory _minters, 
     address[] memory _pausers) 
@@ -30,17 +30,16 @@ contract Manager is Initializable {
     return (address(token), address(daoStorage));
     }
 
-
-
     function tokenCount() public view returns(uint){
         return token.totalSupply();
     }
 
     function addWord(string memory _word) public {
-
+        require(daoStorage.setWord(_word));
+        token.mint(msg.sender, 1);
     }
 
-    function getBalance() public returns(uint256){
+    function getBalance() public view returns(uint256){
         return address(this).balance;
     }
 
