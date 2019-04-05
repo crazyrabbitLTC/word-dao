@@ -96,27 +96,27 @@ contract DaoStorage is Initializable {
     //Public Getters
     
     //getWordStringToUint256
-    function getWordStringToUint256(string calldata _word) view external returns(uint256){
+    function getWordStringToUint256(string calldata _word) view external payable returns(uint256){
         return numberForWord[_word];
     }
     //getWordStringToBytes32
-    function getWordStringToBytes32(string calldata _word) view external returns(bytes32){
+    function getWordStringToBytes32(string calldata _word) view external payable returns(bytes32){
         return bytes32ForWord[_word];
     }
     //getWordUint256ToString
-    function getWordUint256ToString(uint256 _wordNumber) view external returns(string memory){
+    function getWordUint256ToString(uint256 _wordNumber) view external payable returns(string memory){
         return wordByNumber[_wordNumber];
     }
     //getWordUint256ToBytes32
-    function getWordUint256ToBytes32(uint256 _wordNumber) view external returns(bytes32){
+    function getWordUint256ToBytes32(uint256 _wordNumber) view external payable returns(bytes32){
         return uint256ForBytes32[_wordNumber];
     }
     //getWordBytes32ToString
-    function getWordBytes32ToString(bytes32 _wordBytes) view external returns(string memory){
+    function getWordBytes32ToString(bytes32 _wordBytes) view external payable returns(string memory){
         return wordByBytes32[_wordBytes];
     }
     //getWordBytes32ToUint256
-    function getWordBytes32ToUint256(bytes32 _wordBytes) view external returns(uint256){
+    function getWordBytes32ToUint256(bytes32 _wordBytes) view external payable returns(uint256){
         return bytes32ForWordUint256[_wordBytes];
     }
 
