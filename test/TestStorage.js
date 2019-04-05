@@ -211,8 +211,9 @@ contract("Token", function(accounts) {
   });
 
   it("should add a word via the manager", async function() {
-    const word = "Love";
-    const word2 = "Happy";
+    const word = "love";
+    const word2 = "happy";
+    const word3 = "sad";
     const storage = Storage.at(this.storageAddress);
 
     await this.manager.methods
@@ -224,7 +225,7 @@ contract("Token", function(accounts) {
       .send({ from: accounts[0], gas: 5000000 });
 
     await this.manager.methods
-      .addWord(word2)
+      .addWord(word3)
       .send({ from: accounts[1], gas: 5000000 });
 
     const result = await storage.methods.totalWords().call();

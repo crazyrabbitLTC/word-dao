@@ -6,10 +6,14 @@ import "zos-lib/contracts/Initializable.sol";
 //The contract should not also manage the token unless it becomes finacially nessesary.
 contract DaoStorage is Initializable {
 
-    //StandaloneERC20 public erc20;
+    mapping(uint256 => uint256) public wordFrequency;
+    uint256 public totalWords;
+    string public language;
 
     address[] public signAuthority;
     mapping(address => bool) public hasAuthorityToSign;
+
+    uint256 fee;
     
     //modifyer to check if Uint is valid
     //modifyer to check if Bytes32 is valid
@@ -30,11 +34,7 @@ contract DaoStorage is Initializable {
     bytes32[] internal arrayOfBytes32;
     uint256[] internal arrayOfUint256;
     string[] internal arrayOfWords;
-    
-    //Statistics
-    mapping(uint256 => uint256) public wordFrequency;
-    uint256 public totalWords;
-    string public language;
+
     
     //events for accessing words
     //wordAdded
@@ -53,12 +53,20 @@ contract DaoStorage is Initializable {
     //Storage Created
     event storageCreated(
         string _language,
-        address _contractAddress
+        address _storageAddress
     );
+
+    //Fee Schedule
+    event feeSchedule(
+        address _storageAddress,
+        uint256 _fee
+    )
        
-    function initialize(string memory _language) initializer public returns(address){
+    function initialize(string memory _language, uint256 _fee) initializer public returns(address){
         language = _language;
+        fee = _fee;
         emit storageCreated(language, address(this));
+        emit feeSchedule(address(this), fee);
     }
     
     //WordSetter
