@@ -223,9 +223,22 @@ contract("Token", function(accounts) {
       .addWord(word2)
       .send({ from: accounts[0], gas: 5000000 });
 
+    await this.manager.methods
+      .addWord(word2)
+      .send({ from: accounts[1], gas: 5000000 });
+
     const result = await storage.methods.totalWords().call();
     const tx = await this.token.methods.totalSupply().call();
-    console.log(tx);
-    assert.equal(new BN(2), result);
+    assert.equal(new BN(3), result);
+  });
+
+  it("Should have a balance of two tokens for accounts[0]", async function() {
+    const balance = await this.token.methods.balanceOf(accounts[0]).call();
+    assert.equal(new BN(2), balance);
+  });
+
+  it("Should have a balance of one tokens for accounts[1]", async function() {
+    const balance = await this.token.methods.balanceOf(accounts[1]).call();
+    assert.equal(new BN(1), balance);
   });
 });
