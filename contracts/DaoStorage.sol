@@ -13,7 +13,7 @@ contract DaoStorage is Initializable {
     address[] public signAuthority;
     mapping(address => bool) public hasAuthorityToSign;
 
-    uint256 fee;
+    uint256 public fee;
     
     //modifyer to check if Uint is valid
     //modifyer to check if Bytes32 is valid
@@ -60,7 +60,7 @@ contract DaoStorage is Initializable {
     event feeSchedule(
         address _storageAddress,
         uint256 _fee
-    )
+    );
        
     function initialize(string memory _language, uint256 _fee) initializer public returns(address){
         language = _language;

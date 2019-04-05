@@ -13,7 +13,7 @@ contract Manager is Initializable {
     string public daoLanguage;
 
 
-    function createStorage(string memory _language, string memory _name, string memory _symbol, 
+    function createStorage(string memory _language, uint256 _fee, string memory _name, string memory _symbol, 
     uint8 _decimals, uint256 _initialSupply, address _initialHolder, address[] memory _minters, 
     address[] memory _pausers) 
     public returns(address, address){
@@ -23,7 +23,7 @@ contract Manager is Initializable {
 
 
     daoStorage = new DaoStorage();
-    daoStorage.initialize(_language);
+    daoStorage.initialize(_language, _fee);
     daoLanguage = _language;
 
     emit daoStorageCreated(daoLanguage, address(token),address(daoStorage));
