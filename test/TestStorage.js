@@ -2,6 +2,9 @@ const { TestHelper } = require("zos");
 const { Contracts, ZWeb3 } = require("zos-lib");
 const truffleAssert = require("truffle-assertions");
 
+const { BN, constants, expectEvent, shouldFail } = require('openzeppelin-test-helpers');
+const { expect } = require('chai');
+
 ZWeb3.initialize(web3.currentProvider);
 
 const Storage = Contracts.getFromLocal("DaoStorage");
@@ -147,6 +150,37 @@ contract("Token", function(accounts) {
     this.storageAddress = event[2];
 
     assert.equal(event[0], language);
+  });
+
+  xit("should create a DaoStorage Logs test", async function() {
+    const {
+      language,
+      name,
+      symbol,
+      decimals,
+      initialSupply,
+      initialHolder,
+      minters,
+      pausers
+    } = storageDefinition;
+
+    const tx = await this.manager.methods
+    .createStorage(
+      language,
+      name,
+      symbol,
+      decimals,
+      initialSupply,
+      initialHolder,
+      minters,
+      pausers
+    )
+    .call({ from: accounts[0], gas: 5000000 });
+
+    console.log(tx);
+  
+
+   await  expectEvent.inTransaction(tx, Manager, 'daoStorageCreated');
   });
 
   it("should have deployed a token for the DaoSTorage with no supply(yet)", async function() {

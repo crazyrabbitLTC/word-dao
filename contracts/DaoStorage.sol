@@ -63,7 +63,7 @@ contract DaoStorage is Initializable {
     
     //WordSetter
     
-    function setWord(string calldata _word) external returns(uint256, bytes32){
+    function setWord(string calldata _word) external returns(bool){
         //check word first
         
         bytes32 _wordBytes32 = keccak256(abi.encodePacked(_word));
@@ -82,6 +82,7 @@ contract DaoStorage is Initializable {
         
         emit wordAdded(_word, msg.sender,totalWords,_wordBytes32);
         totalWords = totalWords + 1;
+        return true;
     }
     
     //Public Getters

@@ -8,34 +8,32 @@ contract Manager is Initializable {
 
     event daoStorageCreated(string, address, address);
     
-    struct WordDao {
-        string _language;
-        address _token;
-        address _daoStorage;
-    }
+    StandaloneERC20 public token;
+    DaoStorage public daoStorage;
+    string public daoLanguage;
 
-   WordDao thisWordDao;
     
-
     function createStorage(string memory _language, string memory _name, string memory _symbol, 
     uint8 _decimals, uint256 _initialSupply, address _initialHolder, address[] memory _minters, 
     address[] memory _pausers) 
-    public{
+    public returns(address, address){
         
-    StandaloneERC20 erc20 = new StandaloneERC20();
-    erc20.initialize(_name, _symbol,_decimals, _initialSupply, address(this),_minters,_pausers);
+    token = new StandaloneERC20();
+    token.initialize(_name, _symbol,_decimals, _initialSupply, address(this),_minters,_pausers);
 
-    DaoStorage daoStorage = new DaoStorage();
+    daoStorage = new DaoStorage();
     daoStorage.initialize(_language);
+    daoLanguage = _language;
 
-    WordDao memory wordDao;
-    wordDao._language = _language;
-    wordDao._token = address(erc20);
-    wordDao._daoStorage = address(daoStorage);
+    emit daoStorageCreated(daoLanguage, address(token),address(daoStorage));
 
-    //thisWordDao = wordDao;
+    return (address(token), address(daoStorage));
+    }
 
-    emit daoStorageCreated(wordDao._language, wordDao._token,wordDao._daoStorage);
+
+
+    function tokenCount() public view returns(uint){
+        return token.totalSupply();
     }
 
     function addWord(string memory _word) public {

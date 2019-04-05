@@ -337,7 +337,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 273,
-        "sourceUnit": 2020,
+        "sourceUnit": 2052,
         "src": "25:45:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -351,10 +351,10 @@
               "id": 3,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2019,
+              "referencedDeclaration": 2051,
               "src": "254:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$2019",
+                "typeIdentifier": "t_contract$_Initializable_$2051",
                 "typeString": "contract Initializable"
               }
             },
@@ -364,7 +364,7 @@
           }
         ],
         "contractDependencies": [
-          2019
+          2051
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -372,7 +372,7 @@
         "id": 272,
         "linearizedBaseContracts": [
           272,
-          2019
+          2051
         ],
         "name": "DaoStorage",
         "nodeType": "ContractDefinition",
@@ -1276,7 +1276,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2049,
+                            "referencedDeclaration": 2081,
                             "src": "2002:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_DaoStorage_$272",
@@ -1375,7 +1375,7 @@
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2000,
+                  "referencedDeclaration": 2032,
                   "src": "1889:11:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1533,7 +1533,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2021,
+                            "referencedDeclaration": 2053,
                             "src": "2200:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -1580,7 +1580,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2028,
+                      "referencedDeclaration": 2060,
                       "src": "2190:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -2277,7 +2277,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2034,
+                          "referencedDeclaration": 2066,
                           "src": "2698:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3619,7 +3619,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 273,
-        "sourceUnit": 2020,
+        "sourceUnit": 2052,
         "src": "25:45:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3633,10 +3633,10 @@
               "id": 3,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2019,
+              "referencedDeclaration": 2051,
               "src": "254:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$2019",
+                "typeIdentifier": "t_contract$_Initializable_$2051",
                 "typeString": "contract Initializable"
               }
             },
@@ -3646,7 +3646,7 @@
           }
         ],
         "contractDependencies": [
-          2019
+          2051
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -3654,7 +3654,7 @@
         "id": 272,
         "linearizedBaseContracts": [
           272,
-          2019
+          2051
         ],
         "name": "DaoStorage",
         "nodeType": "ContractDefinition",
@@ -4558,7 +4558,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2049,
+                            "referencedDeclaration": 2081,
                             "src": "2002:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_DaoStorage_$272",
@@ -4657,7 +4657,7 @@
                   "name": "initializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2000,
+                  "referencedDeclaration": 2032,
                   "src": "1889:11:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -4815,7 +4815,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2021,
+                            "referencedDeclaration": 2053,
                             "src": "2200:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -4862,7 +4862,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2028,
+                      "referencedDeclaration": 2060,
                       "src": "2190:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5559,7 +5559,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2034,
+                          "referencedDeclaration": 2066,
                           "src": "2698:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -6880,7 +6880,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-04-03T20:48:51.126Z",
+  "updatedAt": "2019-04-05T00:10:21.249Z",
   "devdoc": {
     "methods": {}
   },
