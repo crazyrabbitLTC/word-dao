@@ -19,7 +19,8 @@ contract Manager is Initializable {
     public returns(address, address){
         
     token = new StandaloneERC20();
-    token.initialize(_name, _symbol,_decimals, _initialSupply, address(this),_minters,_pausers);
+    token.initialize(_name, _symbol,_decimals,_minters,_pausers);
+
 
     daoStorage = new DaoStorage();
     daoStorage.initialize(_language);
@@ -33,14 +34,22 @@ contract Manager is Initializable {
     function tokenCount() public view returns(uint){
         return token.totalSupply();
     }
-
-    function addWord(string memory _word) public {
-        require(daoStorage.setWord(_word));
+ 
+    function testMintToken(address _recipient, uint _amount) public {
+        token.mint(_recipient,_amount);
+    }
+    function addWord(string memory _word) public returns(string memory) {
         token.mint(msg.sender, 1);
+        daoStorage.setWord(_word);
+        return(_word);
     }
 
     function getBalance() public view returns(uint256){
         return address(this).balance;
+    }
+
+    function canManagerMint() public view returns(bool){
+        return token.isMinter(address(this));
     }
 
     function () payable external {
