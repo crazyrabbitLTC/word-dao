@@ -4,6 +4,12 @@ import "zos-lib/contracts/Initializable.sol";
 //import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
 
 //The contract should not also manage the token unless it becomes finacially nessesary.
+
+//Perhaps users could have a "fund" where they deposit credits and 
+//get to use it for as long as credits are availible. That would reduce the need to
+//send ether for every transaction
+
+
 contract DaoStorage is Initializable {
 
     mapping(uint256 => uint256) public wordFrequency;
