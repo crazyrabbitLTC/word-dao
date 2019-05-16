@@ -63,13 +63,21 @@ const createOrbitDB = async (ipfs, databaseName) => {
 };
 
 const moveDataToDB = async (wordMap, db) => {
+ let hashArray = [];
 
   const asyncForEach = async (wordMap, callback, db) => {
     console.log("wordMap Size: ", wordMap.size);
     for (let index = 0; index < wordMap.size; index++) {
       let word = wordMap.get(index);
       let hash = await callback(index, word, db);
-      console.log(hash);
+      
+      let wordOBJ = {
+          word,
+          hash,
+          index
+      }
+      console.log(wordOBJ);
+      hashArray.push(wordOBJ);
     }
   }
 
