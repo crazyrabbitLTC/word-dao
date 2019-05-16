@@ -2,6 +2,12 @@ const { createReadStream } = require("fs");
 const { createInterface } = require("readline");
 const IPFS = require("ipfs");
 const OrbitDB = require("orbit-db");
+const EthCrypto = require("eth-crypto");
+const signerIdentity = EthCrypto.createIdentity();
+
+
+
+
 
 const path = require("path");
 const file = path.join("words.txt");
@@ -62,24 +68,49 @@ const createOrbitDB = async (ipfs, databaseName) => {
   return db;
 };
 
+const signWord = async (word, index) => {
+    
+    let obj = {
+        word, index
+    }
+
+    console.log(EthCrypto);   
+    const message = EthCrypto.hash.Keccak256(obj);
+    const signature = EthCrypto.sign(signerIdentity.privateKey, message)
+    
+    let result = {obj, signature};
+    return result;
+
+};
+
 const moveDataToDB = async (wordMap, db) => {
- let hashArray = [];
+  let hashArray = [];
 
   const asyncForEach = async (wordMap, callback, db) => {
     console.log("wordMap Size: ", wordMap.size);
+    let identity = db.identity.toJSON();
     for (let index = 0; index < wordMap.size; index++) {
+     
       let word = wordMap.get(index);
-      let hash = await callback(index, word, db);
-      
-      let wordOBJ = {
-          word,
-          hash,
-          index
+      let signature = signWord(word, index)
+      let wordObj = {
+          word, 
+          signature,
+          index,
       }
+      let wordHash = await callback(index, JSON.stringify(wordObj), db);
+
+      let result = {
+        identity,
+        word,
+        wordHash,
+        index,
+        signature
+      };
       console.log(wordOBJ);
       hashArray.push(wordOBJ);
     }
-  }
+  };
 
   const start = async (wordMap, callback, db) => {
     await asyncForEach(wordMap, callback, db);
@@ -88,10 +119,10 @@ const moveDataToDB = async (wordMap, db) => {
   start(wordMap, addWordToDB, db);
 };
 
-const addWordToDB = async (iterator, word, db) => {
+const addWordToDB = async (index, wordObj, db) => {
   const promise = new Promise(function(resolve, reject) {
     try {
-      resolve(db.set(iterator, { word }));
+      resolve(db.set(index, { wordObj }));
     } catch (error) {
       console.log(error);
       reject(error);
@@ -105,6 +136,7 @@ const app = async () => {
   console.log("Map size: ", wordMap.size);
   const ipfs = await getIPFS();
   const db = await createOrbitDB(ipfs, "DennisonsDatabase");
+
   const dbIdentity = db.identity.toJSON();
   //We might want to use this identity in the contract
 
