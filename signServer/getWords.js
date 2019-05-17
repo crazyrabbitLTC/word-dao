@@ -60,6 +60,10 @@ const processFile = async file => {
 const createOrbitDB = async (ipfs, databaseName) => {
   const orbitdb = await OrbitDB.createInstance(ipfs);
   // Create / Open a database
+//   const access = {
+//     // Give write access to ourselves
+//     write: [orbitdb.key.getPublic('hex')],
+//   }
   db = await orbitdb.keyvalue(databaseName);
   await db.load();
   return db;
@@ -81,7 +85,7 @@ const signLibrary = async (wordMap, db) => {
   const asyncForEach = async (wordMap, callback, db) => {
     console.log("wordMap Size: ", wordMap.size);
     let identity = db.identity.toJSON();
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < wordMap.size; index++) {
       let word = wordMap.get(index);
       let signature = await signWord(word, index);
       let wordObj = {
