@@ -1,4 +1,5 @@
 const { createReadStream } = require("fs");
+const fs = require("fs");
 const { createInterface } = require("readline");
 const IPFS = require("ipfs");
 const OrbitDB = require("orbit-db");
@@ -120,6 +121,25 @@ const addWordToDB = async (index, wordObj, db) => {
   return promise;
 };
 
+const writeToFile = async wordHashFile => {
+  // stringify JSON Object
+  var jsonContent = JSON.stringify(wordHashFile);
+  try {
+    fs.writeFile("WordDao_SignedWordList.json", jsonContent, "utf8", function(
+      err
+    ) {
+      if (err) {
+        console.log("An error occured while writing JSON Object to File.");
+        return console.log(err);
+      }
+
+      console.log("JSON file has been saved.");
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const app = async () => {
   const wordMap = await processFile(file);
   console.log("Map size: ", wordMap.size);
@@ -128,11 +148,11 @@ const app = async () => {
 
   const dbIdentity = db.identity.toJSON();
   //We might want to use this identity in the contract
-
+  console.log(`Orbit DB Identity: ${dbIdentity}`);
   const arrayOfSignedWords = await signLibrary(wordMap, db);
   console.log(arrayOfSignedWords);
-
-  
+  await writeToFile(arrayOfSignedWords);
+  //Save Word signatures to a file.
 };
 
 app();
