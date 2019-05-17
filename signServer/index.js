@@ -11,7 +11,7 @@ const publicKey = EthCrypto.publicKeyByPrivateKey(privateKey);
 const address = EthCrypto.publicKey.toAddress(publicKey);
 
 const path = require("path");
-const file = path.join("words.txt");
+const file = path.join("words_alpha.txt");
 
 const getIPFS = async () => {
   const ipfsOptions = {
@@ -68,7 +68,7 @@ const createOrbitDB = async (ipfs, databaseName) => {
   //     // Give write access to ourselves
   //     write: [orbitdb.key.getPublic('hex')],
   //   }
-  db = await orbitdb.create(databaseName, "keyvalue", {
+  db = await orbitdb.create(databaseName+"Test5", "keyvalue", {
     accessController: {
       write: [
         // Give access to ourselves
@@ -101,6 +101,7 @@ const signLibrary = async (wordMap, db) => {
     let identity = db.identity.toJSON();
     for (let index = 0; index < wordMap.size; index++) {
       let word = wordMap.get(index);
+      word = word.toLowerCase();
       let signature = await signWord(word, index);
       let wordObj = {
         word,
