@@ -74,19 +74,19 @@ const signWord = async (word, index) => {
   }
 };
 
-const moveDataToDB = async (wordMap, db) => {
+const signLibrary = async (wordMap, db) => {
   let hashArray = [];
 
   const asyncForEach = async (wordMap, callback, db) => {
     console.log("wordMap Size: ", wordMap.size);
     let identity = db.identity.toJSON();
-    for (let index = 0; index < wordMap.size; index++) {
+    for (let index = 0; index < 5; index++) {
       let word = wordMap.get(index);
       let signature = await signWord(word, index);
       let wordObj = {
         word,
         index,
-        signature,
+        signature
       };
       let wordHash = await callback(
         index,
@@ -103,7 +103,9 @@ const moveDataToDB = async (wordMap, db) => {
     await asyncForEach(wordMap, callback, db);
     console.log("Done");
   };
-  start(wordMap, addWordToDB, db);
+  await start(wordMap, addWordToDB, db);
+  console.log("Really finished");
+  return hashArray;
 };
 
 const addWordToDB = async (index, wordObj, db) => {
@@ -127,7 +129,10 @@ const app = async () => {
   const dbIdentity = db.identity.toJSON();
   //We might want to use this identity in the contract
 
-  moveDataToDB(wordMap, db);
+  const arrayOfSignedWords = await signLibrary(wordMap, db);
+  console.log(arrayOfSignedWords);
+
+  
 };
 
 app();
