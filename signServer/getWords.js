@@ -95,8 +95,8 @@ const signLibrary = async (wordMap, db) => {
         db
       );
 
-      console.log(wordObj);
-      hashArray.push(wordObj);
+      console.log({ ...wordObj, orbitDBHash: wordHash });
+      hashArray.push({ ...wordObj, orbitDBHash: wordHash });
     }
   };
 
@@ -121,20 +121,24 @@ const addWordToDB = async (index, wordObj, db) => {
   return promise;
 };
 
-const writeToFile = async wordHashFile => {
+const writeToFile = async (wordHashFile, dbIdentity) => {
   // stringify JSON Object
-  var jsonContent = JSON.stringify(wordHashFile);
+  const jsonContent = JSON.stringify({dbIdentity, words: wordHashFile});
+  const identity = JSON.stringify(dbIdentity);
   try {
-    fs.writeFile("WordDao_SignedWordList.json", jsonContent, "utf8", function(
-      err
-    ) {
-      if (err) {
-        console.log("An error occured while writing JSON Object to File.");
-        return console.log(err);
-      }
+    fs.writeFile(
+      `WordDao_SignedWordList.json`,
+      jsonContent,
+      "utf8",
+      function(err) {
+        if (err) {
+          console.log("An error occured while writing JSON Object to File.");
+          return console.log(err);
+        }
 
-      console.log("JSON file has been saved.");
-    });
+        console.log("JSON file has been saved.");
+      }
+    );
   } catch (error) {
     console.log(error);
   }
@@ -147,11 +151,10 @@ const app = async () => {
   const db = await createOrbitDB(ipfs, "DennisonsDatabase");
 
   const dbIdentity = db.identity.toJSON();
-  //We might want to use this identity in the contract
   console.log(`Orbit DB Identity: ${dbIdentity}`);
   const arrayOfSignedWords = await signLibrary(wordMap, db);
   console.log(arrayOfSignedWords);
-  await writeToFile(arrayOfSignedWords);
+  await writeToFile(arrayOfSignedWords, dbIdentity);
   //Save Word signatures to a file.
 };
 
