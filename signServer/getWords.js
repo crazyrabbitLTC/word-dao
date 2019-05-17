@@ -5,10 +5,6 @@ const OrbitDB = require("orbit-db");
 const EthCrypto = require("eth-crypto");
 const signerIdentity = EthCrypto.createIdentity();
 
-
-
-
-
 const path = require("path");
 const file = path.join("words.txt");
 
@@ -69,18 +65,13 @@ const createOrbitDB = async (ipfs, databaseName) => {
 };
 
 const signWord = async (word, index) => {
-    
-    let obj = {
-        word, index
-    }
-
-    console.log(EthCrypto);   
-    const message = EthCrypto.hash.Keccak256(obj);
-    const signature = EthCrypto.sign(signerIdentity.privateKey, message)
-    
-    let result = {obj, signature};
-    return result;
-
+  try {
+    const message = EthCrypto.hash.keccak256({ word, index });
+    const signature = await EthCrypto.sign(signerIdentity.privateKey, message);
+    return signature;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const moveDataToDB = async (wordMap, db) => {
@@ -90,25 +81,21 @@ const moveDataToDB = async (wordMap, db) => {
     console.log("wordMap Size: ", wordMap.size);
     let identity = db.identity.toJSON();
     for (let index = 0; index < wordMap.size; index++) {
-     
       let word = wordMap.get(index);
-      let signature = signWord(word, index)
+      let signature = await signWord(word, index);
       let wordObj = {
-          word, 
-          signature,
-          index,
-      }
-      let wordHash = await callback(index, JSON.stringify(wordObj), db);
-
-      let result = {
-        identity,
         word,
-        wordHash,
         index,
-        signature
+        signature,
       };
-      console.log(wordOBJ);
-      hashArray.push(wordOBJ);
+      let wordHash = await callback(
+        index,
+        JSON.stringify({ word, signature, index }),
+        db
+      );
+
+      console.log(wordObj);
+      hashArray.push(wordObj);
     }
   };
 
