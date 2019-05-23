@@ -81,7 +81,7 @@ const signLibrary = async wordMap => {
   const asyncForEach = async wordMap => {
     console.log("wordMap Size: ", wordMap.size);
 
-    for (let index = 0; index < wordMap.size; index++) {
+    for (let index = 0; index < 5; index++) {
       try {
         let word = wordMap.get(index);
         word = word.toLowerCase();
