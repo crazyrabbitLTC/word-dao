@@ -2,10 +2,12 @@ const { createReadStream } = require("fs");
 const fs = require("fs");
 const { createInterface } = require("readline");
 const IPFS = require("ipfs");
-const {utils} = require('ethers');
+const { utils } = require("ethers");
 const EthCrypto = require("eth-crypto");
 const signerIdentity = EthCrypto.createIdentity();
-if (process.argv.length < 3){ console.log("You forgot your priv key")};
+if (process.argv.length < 3) {
+  console.log("You forgot your priv key");
+}
 
 const privateKey = process.argv[2];
 const publicKey = EthCrypto.publicKeyByPrivateKey(privateKey);
@@ -63,7 +65,6 @@ const processFile = async file => {
   return output;
 };
 
-
 const signWord = async (word, index) => {
   try {
     const message = EthCrypto.hash.keccak256(JSON.stringify({ word, index }));
@@ -74,46 +75,54 @@ const signWord = async (word, index) => {
   }
 };
 
-const signLibrary = async (wordMap) => {
+const signLibrary = async wordMap => {
   let hashArray = [];
 
-  const asyncForEach = async (wordMap) => {
+  const asyncForEach = async wordMap => {
     console.log("wordMap Size: ", wordMap.size);
 
     for (let index = 0; index < wordMap.size; index++) {
-      let word = wordMap.get(index);
-      word = word.toLowerCase();
-      let wordArray = word.split("");
-      let wordHash = utils.keccak256(word);
-      let wordLength = wordArray.length;
+      try {
+        let word = wordMap.get(index);
+        word = word.toLowerCase();
+        let wordArray = word.split("");
+        let wordHash = utils.id("0x" + word);
+        let wordLength = wordArray.length;
 
-      let signature = await signWord(word, wordArray, wordHash, wordLength, index);
-      let wordObj = {
-        word,
-        wordArray,
-        wordHash,
-        wordLength,
-        index,
-        signature
-      };
+        let signature = await signWord(
+          word,
+          wordArray,
+          wordHash,
+          wordLength,
+          index
+        );
+        let wordObj = {
+          word,
+          wordArray,
+          wordHash,
+          wordLength,
+          index,
+          signature
+        };
 
-      console.log({ ...wordObj});
-      hashArray.push({ ...wordObj});
-      
+        console.log({ ...wordObj });
+        hashArray.push({ ...wordObj });
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
-  const start = async (wordMap) => {
+  const start = async wordMap => {
     await asyncForEach(wordMap);
     console.log("Done");
   };
-    await start(wordMap);
+  await start(wordMap);
   console.log("Really finished");
   return hashArray;
 };
 
 const writeToFile = async (wordHashFile, dbIdentity) => {
-
   const jsonContent = JSON.stringify({ dbIdentity, words: wordHashFile });
   try {
     fs.writeFile(`WordDao_SignedWordList.json`, jsonContent, "utf8", function(
@@ -131,7 +140,6 @@ const writeToFile = async (wordHashFile, dbIdentity) => {
   }
 };
 
-
 const app = async () => {
   const wordMap = await processFile(file);
   console.log("Map size: ", wordMap.size);
@@ -141,7 +149,6 @@ const app = async () => {
   await writeToFile(arrayOfSignedWords);
   const ipfsBlobHash = await ipfs.addFromFs(`WordDao_SignedWordList.json`);
   console.log("The final Hash: ", ipfsBlobHash);
-
 };
 
 app();
