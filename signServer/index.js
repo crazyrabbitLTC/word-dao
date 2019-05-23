@@ -2,7 +2,7 @@ const { createReadStream } = require("fs");
 const fs = require("fs");
 const { createInterface } = require("readline");
 const IPFS = require("ipfs");
-const OrbitDB = require("orbit-db");
+const {utils} = require('ethers');
 const EthCrypto = require("eth-crypto");
 const signerIdentity = EthCrypto.createIdentity();
 if (process.argv.length < 3){ console.log("You forgot your priv key")};
@@ -83,9 +83,16 @@ const signLibrary = async (wordMap) => {
     for (let index = 0; index < wordMap.size; index++) {
       let word = wordMap.get(index);
       word = word.toLowerCase();
-      let signature = await signWord(word, index);
+      let wordArray = word.split("");
+      let wordHash = utils.keccak256(word);
+      let wordLength = wordArray.length;
+
+      let signature = await signWord(word, wordArray, wordHash, wordLength, index);
       let wordObj = {
         word,
+        wordArray,
+        wordHash,
+        wordLength,
         index,
         signature
       };
