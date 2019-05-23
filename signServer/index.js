@@ -68,7 +68,7 @@ const createOrbitDB = async (ipfs, databaseName) => {
   //     // Give write access to ourselves
   //     write: [orbitdb.key.getPublic('hex')],
   //   }
-  db = await orbitdb.create(databaseName+"Test5", "keyvalue", {
+  db = await orbitdb.create(databaseName+"Test6", "keyvalue", {
     accessController: {
       write: [
         // Give access to ourselves
@@ -93,12 +93,12 @@ const signWord = async (word, index) => {
   }
 };
 
-const signLibrary = async (wordMap, db) => {
+const signLibrary = async (wordMap, db = {}) => {
   let hashArray = [];
 
-  const asyncForEach = async (wordMap, callback, db) => {
+  const asyncForEach = async (wordMap, callback, db = {}) => {
     console.log("wordMap Size: ", wordMap.size);
-    let identity = db.identity.toJSON();
+   // let identity = db.identity.toJSON();
     for (let index = 0; index < wordMap.size; index++) {
       let word = wordMap.get(index);
       word = word.toLowerCase();
@@ -108,14 +108,14 @@ const signLibrary = async (wordMap, db) => {
         index,
         signature
       };
-      let wordHash = await callback(
-        index,
-        JSON.stringify({ word, signature, index }),
-        db
-      );
+    //   let wordHash = await callback(
+    //     index,
+    //     JSON.stringify({ word, signature, index }),
+    //     db
+    //   );
 
-      console.log({ ...wordObj, orbitDBHash: wordHash });
-      hashArray.push({ ...wordObj, orbitDBHash: wordHash });
+      console.log({ ...wordObj});
+      hashArray.push({ ...wordObj});
       
     }
   };
@@ -124,7 +124,7 @@ const signLibrary = async (wordMap, db) => {
     await asyncForEach(wordMap, callback, db);
     console.log("Done");
   };
-  await start(wordMap, addWordToDB, db);
+    await start(wordMap, addWordToDB, db);
   console.log("Really finished");
   return hashArray;
 };
@@ -167,13 +167,13 @@ const app = async () => {
   const wordMap = await processFile(file);
   console.log("Map size: ", wordMap.size);
   const ipfs = await getIPFS();
-  const db = await createOrbitDB(ipfs, publicKey);
+  //const db = await createOrbitDB(ipfs, publicKey);
 
-  const dbIdentity = db.identity.toJSON();
-  console.log(`Orbit DB Identity: ${dbIdentity}`);
-  const arrayOfSignedWords = await signLibrary(wordMap, db);
-  console.log(arrayOfSignedWords);
-  await writeToFile(arrayOfSignedWords, dbIdentity);
+  //const dbIdentity = db.identity.toJSON();
+  //console.log(`Orbit DB Identity: ${dbIdentity}`);
+  const arrayOfSignedWords = await signLibrary(wordMap);
+  console.log(arrayOfSignedWords.length);
+  await writeToFile(arrayOfSignedWords);
   const ipfsBlobHash = await ipfs.addFromFs(`WordDao_SignedWordList.json`);
   console.log("The final Hash: ", ipfsBlobHash);
   //Save Word signatures to a file.
