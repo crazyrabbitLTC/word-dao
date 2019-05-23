@@ -6,6 +6,8 @@ const OrbitDB = require("orbit-db");
 const EthCrypto = require("eth-crypto");
 const signerIdentity = EthCrypto.createIdentity();
 //console.log("PROCESS ARGUMENTS: ", process.argv[2]);
+if (process.argv.length < 3){ console.log("You forgot your priv key")};
+
 const privateKey = process.argv[2];
 const publicKey = EthCrypto.publicKeyByPrivateKey(privateKey);
 const address = EthCrypto.publicKey.toAddress(publicKey);
