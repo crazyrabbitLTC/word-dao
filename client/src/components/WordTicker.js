@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "WordTicker.css";
+import "./WordTicker.css";
 
 const mockData = [
   { user: "0xCoihj805dDCa2895497fF41c5f2eF5ef93BaeC43", word: "Hope" },
