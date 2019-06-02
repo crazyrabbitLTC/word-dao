@@ -3,7 +3,7 @@ import { useWeb3Context } from "web3-react";
 
 import TopContainer from "./components/TopContainer";
 import BottomContainer from "./components/BottomContainer";
-import RegisterWord from "./components/RegisterWord";
+import MiddleContainer from './components/MiddleContainer';
 import "./App.css";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
       <div className="App">
         <TopContainer />
         <header className="App-header">
-          <RegisterWord />
+          <MiddleContainer />
         </header>
         <BottomContainer />
       </div>

@@ -8,7 +8,7 @@ import { connectors } from "./utils";
 import "./index.css";
 
 ReactDOM.render(
-  <Web3Provider connectors={connectors} libraryName={"ethers.js" | null}>
+  <Web3Provider connectors={connectors} libraryName={"ethers.js"}>
     <App />
   </Web3Provider>,
   document.getElementById("root")
