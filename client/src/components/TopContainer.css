@@ -1,0 +1,17 @@
+.TopMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3px;
+    margin-right: 15px;
+    margin-left: 5px;
+    align-items: center;
+}
+
+.TopMenu-LeftSide {
+
+}
+
+.TopMenu-RightSide {
+
+}
