@@ -2,29 +2,22 @@ import React, { useState, useEffect } from "react";
 import { Modal, Button, Card, Box, Heading, Text, Flex } from "rimble-ui";
 
 const TxModal = props => {
+    console.log("The props: ", props);
 
   const initialState = {
     isOpen: false,
     action: "none"
   };
 
+  const {isOpen, hideModal, word} = props;
+
   const [state, setState] = useState(initialState);
 
-  const closeModal = e => {
-    e.preventDefault();
-    setState({ ...state, isOpen: false });
-  };
-
-  const openModal = e => {
-    e.preventDefault();
-    setState({ ...state, isOpen: true });
-  };
 
   return (
     <React.Fragment>
-      <Button onClick={openModal}>Open Modal</Button>
 
-      <Modal isOpen={state.isOpen}>
+      <Modal isOpen={isOpen}>
         <Card width={"420px"} p={0}>
           <Button.Text
             icononly
@@ -35,11 +28,11 @@ const TxModal = props => {
             right={0}
             mt={3}
             mr={3}
-            onClick={closeModal}
+            onClick={() => hideModal(false)}
           />
           <Box p={4} mb={3}>
-            <Heading.h3>Confirm {state.action}</Heading.h3>
-            <Text>Are you sure you want to {state.action}?</Text>
+            <Heading.h3>Confirm {word}</Heading.h3>
+            <Text>Are you sure you want to {word}?</Text>
           </Box>
           <Flex
             px={4}

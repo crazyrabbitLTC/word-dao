@@ -2,7 +2,7 @@ import React from 'react';
 import "./BottomContainer.css";
 
 const BottomContainer = () => {
-    return (<div classNam="BottomContainer">
+    return (<div className="BottomContainer">
         <div>
         Left Side   
         </div>
