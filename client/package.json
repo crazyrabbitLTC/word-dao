@@ -7,7 +7,8 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "rimble-ui": "^0.8.0",
-    "styled-components": "^4.2.1"
+    "styled-components": "^4.2.1",
+    "web3-react": "^5.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

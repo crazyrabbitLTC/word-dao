@@ -26,6 +26,14 @@ function WordForm(props) {
     handleWord(word);
   };
 
+  const handleInput = evt => {
+    console.log("in handle input");
+    console.log("EVent: ", evt)
+    if (evt.target.value !== " ") {
+      setWord(evt.target.value);
+    }
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -34,7 +42,8 @@ function WordForm(props) {
           type="search"
           required="true"
           placeholder={sampleWordList[sampleWordIndex]}
-          onChange={e => setWord(e.target.value)}
+          onChange={e => handleInput(e)}
+          required pattern="[0-9a-zA-Z_.-]*"
         />{" "}
         <Button type="submit" width={9}>
           claim
