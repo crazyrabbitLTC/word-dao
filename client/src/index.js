@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Web3Provider from "web3-react";
+import Web3 from 'web3'
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -8,7 +9,7 @@ import { connectors } from "./utils";
 import "./index.css";
 
 ReactDOM.render(
-  <Web3Provider connectors={connectors} libraryName={"ethers.js"}>
+  <Web3Provider connectors={connectors} libraryName={'web3.js'} web3Api={Web3}>
     <App />
   </Web3Provider>,
   document.getElementById("root")

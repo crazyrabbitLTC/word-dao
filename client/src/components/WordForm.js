@@ -4,8 +4,6 @@ import { sampleWordList } from "./utils";
 import TxModal from "./TxModal";
 
 function WordForm(props) {
-  console.log(`Word Form Props: ${props}`);
-
   const { showModal, handleWord } = props;
   const [sampleWordIndex, setSampleWordIndex] = useState(0);
 

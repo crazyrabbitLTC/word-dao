@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button, Card, Box, Heading, Text, Flex } from "rimble-ui";
 
-const TxModal = props => {
-    console.log("The props: ", props);
-
+const TxModal = props => {  
   const initialState = {
     isOpen: false,
     action: "none"
@@ -32,7 +30,8 @@ const TxModal = props => {
           />
           <Box p={4} mb={3}>
             <Heading.h3>Confirm {word}</Heading.h3>
-            <Text>Are you sure you want to {word}?</Text>
+            <Text>You are registering the word:  {word}?</Text>
+            <Text>Cost to register is $1 </Text>
           </Box>
           <Flex
             px={4}

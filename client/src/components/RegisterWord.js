@@ -4,8 +4,6 @@ import WordForm from "./WordForm";
 import TxModal from "./TxModal";
 
 function RegisterWord() {
-  console.log("ARe we renderign?");
-
   const [modalState, setModalState] = useState(false);
   const hideModal = () => setModalState(false);
   const showModal = () => setModalState(true);
