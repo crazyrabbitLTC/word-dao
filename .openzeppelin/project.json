@@ -1,0 +1,18 @@
+{
+  "manifestVersion": "2.2",
+  "contracts": {
+    "Migrations": "Migrations",
+    "WordDao": "WordDao",
+    "WordStorage": "WordStorage"
+  },
+  "dependencies": {},
+  "name": "word-dao",
+  "version": "0.1.1",
+  "compiler": {
+    "manager": "zos",
+    "compilerSettings": {
+      "optimizer": {}
+    },
+    "solcVersion": "0.5.10"
+  }
+}

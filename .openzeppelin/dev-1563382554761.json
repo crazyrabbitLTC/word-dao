@@ -1,0 +1,386 @@
+{
+  "contracts": {
+    "Migrations": {
+      "address": "0xf6b75C5fb64822B4Bb2c729F5D4846BCC2648f59",
+      "constructorCode": "60806040523480156100115760006000fd5b505b33600060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b61005a565b6102d3806100696000396000f3fe",
+      "bodyBytecodeHash": "e4ca7dd3402c0c522c2d48e27ae70fb6c50171a43221b4f4b54d2168089461be",
+      "localBytecodeHash": "9617d87db895aa5a056636434f461215e57474732797d3412a5d07637ade40e9",
+      "deployedBytecodeHash": "9617d87db895aa5a056636434f461215e57474732797d3412a5d07637ade40e9",
+      "types": {
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Migrations",
+          "path": "contracts/Migrations.sol",
+          "label": "owner",
+          "astId": 3,
+          "type": "t_address",
+          "src": "58:20:0"
+        },
+        {
+          "contract": "Migrations",
+          "path": "contracts/Migrations.sol",
+          "label": "last_completed_migration",
+          "astId": 5,
+          "type": "t_uint256",
+          "src": "82:36:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": true,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "WordDao": {
+      "address": "0x0C60993b7EC5C5Acee9c26DcCe06a583d9aB1f38",
+      "constructorCode": "60806040523480156100115760006000fd5b50610017565b610609806100266000396000f3fe",
+      "bodyBytecodeHash": "5d0fe4d525c564f22b35bb300ba31e47ed2de5cae5e3d4a163d15766ffd226ef",
+      "localBytecodeHash": "64d60e2dacc1e27b401c80fc30abcc69c32cd161c3e790927fe1b49fefaea54e",
+      "deployedBytecodeHash": "64d60e2dacc1e27b401c80fc30abcc69c32cd161c3e790927fe1b49fefaea54e",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 2219,
+          "type": "t_bool",
+          "src": "757:24:19"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 2221,
+          "type": "t_bool",
+          "src": "876:25:19"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 2277,
+          "type": "t_array:50<t_uint256>",
+          "src": "1951:29:19"
+        },
+        {
+          "contract": "WordDao",
+          "path": "contracts/WordDao.sol",
+          "label": "erc20Token",
+          "astId": 66,
+          "type": "t_address",
+          "src": "569:31:1"
+        },
+        {
+          "contract": "WordDao",
+          "path": "contracts/WordDao.sol",
+          "label": "erc721Token",
+          "astId": 68,
+          "type": "t_address",
+          "src": "606:41:1"
+        },
+        {
+          "contract": "WordDao",
+          "path": "contracts/WordDao.sol",
+          "label": "wordStore",
+          "astId": 70,
+          "type": "t_address",
+          "src": "653:28:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "WordStorage": {
+      "address": "0x6F763C9081ce1DE3e849C2d0B3fD498c57788c37",
+      "constructorCode": "60806040523480156100115760006000fd5b50610017565b6111f8806100266000396000f3fe",
+      "bodyBytecodeHash": "78a3c68feea304b3a9f4903fb0b1fdf185cd67d53eefef763f51e557e9328799",
+      "localBytecodeHash": "85e32754d6f08032375723b8aa8c442ea9a51b2ef8dff06c73b371dd5636d61e",
+      "deployedBytecodeHash": "85e32754d6f08032375723b8aa8c442ea9a51b2ef8dff06c73b371dd5636d61e",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_array:dyn<t_address>": {
+          "id": "t_array:dyn<t_address>",
+          "valueType": "t_address",
+          "length": "dyn",
+          "kind": "array",
+          "label": "address[]"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_string>": {
+          "id": "t_mapping<t_string>",
+          "valueType": "t_string",
+          "label": "mapping(key => string)",
+          "kind": "mapping"
+        },
+        "t_bytes32": {
+          "id": "t_bytes32",
+          "kind": "elementary",
+          "label": "bytes32"
+        },
+        "t_mapping<t_bytes32>": {
+          "id": "t_mapping<t_bytes32>",
+          "valueType": "t_bytes32",
+          "label": "mapping(key => bytes32)",
+          "kind": "mapping"
+        },
+        "t_array:dyn<t_bytes32>": {
+          "id": "t_array:dyn<t_bytes32>",
+          "valueType": "t_bytes32",
+          "length": "dyn",
+          "kind": "array",
+          "label": "bytes32[]"
+        },
+        "t_array:dyn<t_uint256>": {
+          "id": "t_array:dyn<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "dyn",
+          "kind": "array",
+          "label": "uint256[]"
+        },
+        "t_array:dyn<t_string>": {
+          "id": "t_array:dyn<t_string>",
+          "valueType": "t_string",
+          "length": "dyn",
+          "kind": "array",
+          "label": "string[]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 2219,
+          "type": "t_bool",
+          "src": "757:24:19"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 2221,
+          "type": "t_bool",
+          "src": "876:25:19"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 2277,
+          "type": "t_array:50<t_uint256>",
+          "src": "1951:29:19"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "wordFrequency",
+          "astId": 134,
+          "type": "t_mapping<t_uint256>",
+          "src": "117:48:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "totalWords",
+          "astId": 136,
+          "type": "t_uint256",
+          "src": "171:25:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "language",
+          "astId": 138,
+          "type": "t_string",
+          "src": "202:22:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "signAuthority",
+          "astId": 141,
+          "type": "t_array:dyn<t_address>",
+          "src": "231:30:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "hasAuthorityToSign",
+          "astId": 145,
+          "type": "t_mapping<t_bool>",
+          "src": "267:50:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "fee",
+          "astId": 147,
+          "type": "t_uint256",
+          "src": "324:18:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "wordByNumber",
+          "astId": 151,
+          "type": "t_mapping<t_string>",
+          "src": "742:48:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "numberForWord",
+          "astId": 155,
+          "type": "t_mapping<t_uint256>",
+          "src": "796:49:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "wordByBytes32",
+          "astId": 159,
+          "type": "t_mapping<t_string>",
+          "src": "851:49:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "bytes32ForWord",
+          "astId": 163,
+          "type": "t_mapping<t_bytes32>",
+          "src": "906:50:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "uint256ForBytes32",
+          "astId": 167,
+          "type": "t_mapping<t_bytes32>",
+          "src": "962:54:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "bytes32ForWordUint256",
+          "astId": 171,
+          "type": "t_mapping<t_uint256>",
+          "src": "1022:58:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "arrayOfBytes32",
+          "astId": 174,
+          "type": "t_array:dyn<t_bytes32>",
+          "src": "1104:33:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "arrayOfUint256",
+          "astId": 177,
+          "type": "t_array:dyn<t_uint256>",
+          "src": "1143:33:2"
+        },
+        {
+          "contract": "WordStorage",
+          "path": "contracts/WordStorage.sol",
+          "label": "arrayOfWords",
+          "astId": 180,
+          "type": "t_array:dyn<t_string>",
+          "src": "1182:30:2"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {},
+  "manifestVersion": "2.2",
+  "version": "0.1.1"
+}
