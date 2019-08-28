@@ -12,47 +12,51 @@ fs.readFile(file, "utf8", function(err, data) {
   var wordsMap = createWordMap(wordsArray);
   //writeToFile(wordsMap);
   var finalWordsArray = sortByCount(wordsMap);
-  const {wordToInt, intToWord} = getFinalMapping(finalWordsArray);
-  //console.log("Word  To  int:  ", intToWord);
-  // console.log(
-  //   'The word "' +
-  //     finalWordsArray[0].name +
-  //     '" appears the most in the file ' +
-  //     finalWordsArray[0].total +
-  //     " times"
-  // );
-  // console.log(finalWordsArray);
-  /*
-    output:
-    [ { name: 'he', total: 10 },
-      { name: 'again', total: 7 },
-      { name: 'away', total: 7 },
-      ... ]
-    The word "he" appears the most in the file 10 times
-  */
+  const { wordToInt, intToWord } = getFinalMapping(finalWordsArray);
+
+  writeToFile(wordToInt, "WordToIntegers.json");
+  writeToFile(intToWord, "IntegersToWords.json");
+
 });
 
-function getFinalMapping(array){
+const writeToFile = async (wordHashFile, fileName) => {
+  // stringify JSON Object
+
+  const jsonContent = JSON.stringify(wordHashFile);
+ 
+  try {
+    fs.writeFile(fileName, jsonContent, "utf8", function(err) {
+      if (err) {
+        console.log("An error occured while writing JSON Object to File.");
+        return console.log(err);
+      }
+
+      console.log("JSON file has been saved.");
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+function getFinalMapping(array) {
   let wordToInt = {};
   let intToWord = {};
 
   array.forEach((item, index) => {
-    //console.log("Item: ", item);
-    //const newitem = item.replace(/[^a-zA-Z ]/g, "");
     wordToInt[item.name.replace(/[^a-zA-Z ]/g, "")] = index;
-    intToWord[index] =  item.name;
+    intToWord[index] = item.name;
   });
-  console.log("Word to Int: ", wordToInt);
-  
-  return (wordToInt, intToWord);
-};
+
+return {wordToInt, intToWord};
+}
 
 function splitByWords(text) {
   // split string by spaces (including spaces, tabs, and newlines)
-  var wordsArray = text.split(/\s+/);
-  // wordsArray = wordsArray.forEach(el => {
-  //   el.replace(/[^a-zA-Z ]/g, "")
-  // })
+  // Remove non letter charecters
+  let newArray = [];
+  var wordsArray = text.replace(/[^a-zA-Z ]/g, " ");
+  wordsArray = wordsArray.split(/\s+/);
+
   return wordsArray;
 }
 
@@ -93,20 +97,3 @@ function sortByCount(wordsMap) {
 
   return finalWordsArray;
 }
-
-const writeToFile = async wordHashFile => {
-  // stringify JSON Object
-  const jsonContent = JSON.stringify(wordHashFile);
-  try {
-    fs.writeFile(`wordFrequency.json`, jsonContent, "utf8", function(err) {
-      if (err) {
-        console.log("An error occured while writing JSON Object to File.");
-        return console.log(err);
-      }
-
-      console.log("JSON file has been saved.");
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
