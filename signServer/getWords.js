@@ -128,7 +128,6 @@ const addWordToDB = async (index, wordObj, db) => {
 const writeToFile = async (wordHashFile, dbIdentity) => {
   // stringify JSON Object
   const jsonContent = JSON.stringify({dbIdentity, words: wordHashFile});
-  const identity = JSON.stringify(dbIdentity);
   try {
     fs.writeFile(
       `WordDao_SignedWordList.json`,

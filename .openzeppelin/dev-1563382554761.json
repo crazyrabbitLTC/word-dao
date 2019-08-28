@@ -380,7 +380,19 @@
     }
   },
   "solidityLibs": {},
-  "proxies": {},
+  "proxies": {
+    "word-dao/WordDao": [
+      {
+        "address": "0x15bbEd0525fF9461BeBc3C2d80AAEe6464684d3B",
+        "version": "0.1.1",
+        "implementation": "0x0C60993b7EC5C5Acee9c26DcCe06a583d9aB1f38",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
   "manifestVersion": "2.2",
-  "version": "0.1.1"
+  "version": "0.1.1",
+  "proxyAdmin": {
+    "address": "0x6f544963C8b33d5Ee109f4ac6B8C8DF144993792"
+  }
 }

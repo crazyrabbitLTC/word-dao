@@ -9,7 +9,7 @@
   "name": "word-dao",
   "version": "0.1.1",
   "compiler": {
-    "manager": "zos",
+    "manager": "openzeppelin",
     "compilerSettings": {
       "optimizer": {}
     },
