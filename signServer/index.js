@@ -1,8 +1,6 @@
 const { createReadStream } = require("fs");
 const fs = require("fs");
 const { createInterface } = require("readline");
-const IPFS = require("ipfs");
-const OrbitDB = require("orbit-db");
 const EthCrypto = require("eth-crypto");
 const signerIdentity = EthCrypto.createIdentity();
 console.log("Signer Identity: ", signerIdentity);
@@ -15,7 +13,9 @@ const address = EthCrypto.publicKey.toAddress(publicKey);
 
 const path = require("path");
 const file = path.join("words_alpha.txt");
-
+const wordFrequency =  path.join("wordFrequency.json");
+//const wordFreqObj =  JSON.parse(wordFrequency);
+console.log("wordFrequency:  ", typeof(wordFrequency));
 
 const processFile = async file => {
   const processLineByLine = new Promise(function(resolve, reject) {
@@ -128,11 +128,9 @@ const writeToFile = async (wordHashFile) => {
 
 
 const app = async () => {
-  const wordMap = await processFile(file);
-  console.log("Map size: ", wordMap.size);
-  const arrayOfSignedWords = await signLibrary(wordMap);
-  //console.log(arrayOfSignedWords.length);
-  await writeToFile(arrayOfSignedWords);
+  //const wordMap = await processFile(file);
+  //const arrayOfSignedWords = await signLibrary(wordMap);
+  //await writeToFile(arrayOfSignedWords);
 };
 
 app();
