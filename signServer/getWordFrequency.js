@@ -14,8 +14,8 @@ fs.readFile(file, "utf8", function(err, data) {
   var finalWordsArray = sortByCount(wordsMap);
   const { wordToInt, intToWord } = getFinalMapping(finalWordsArray);
 
-  writeToFile(wordToInt, "WordToIntegers.json");
-  writeToFile(intToWord, "IntegersToWords.json");
+  writeToFile(wordToInt, "./textFiles/WordToIntegers.json");
+  writeToFile(intToWord, "./textFiles/IntegersToWords.json");
 
 });
 
