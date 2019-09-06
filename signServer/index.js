@@ -12,6 +12,7 @@ const file = path.join("words_alpha.txt");
 
 let wordToInt = fs.readFileSync(path.join("./textFiles/WordToIntegers.json"));
 let wordToIntegers = JSON.parse(wordToInt);
+console.log("Constructor? ", wordToIntegers["constructor"]);
 
 let intToWord = fs.readFileSync(path.join("./textFiles/IntegersToWords.json"));
 let integerToWords = JSON.parse(intToWord);
@@ -69,10 +70,10 @@ const app = async () => {
     wordToIntegers,
     integerToWords
   );
+console.log("Value of the wordconstructor: ", wordSortedToInt["constructor"]);
+  //const signedMap = signWordSet(wordSortedToInt, identity.privateKey, address);
 
-  const signedMap = signWordSet(wordSortedToInt, identity.privateKey, address);
-
-  console.log("SignedSet Size: ", signedMap.size);
+ // console.log("SignedSet Size: ", signedMap.size);
 };
 
 app();

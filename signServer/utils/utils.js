@@ -67,6 +67,9 @@ const signWordSet = async (wordSortedToInt, privateKey, address) => {
 
   const asyncForEach = async () => {
     for (let word of wordSortedToInt) {
+      if(typeof(word[1]) !== "number"){
+        console.log("Error word: ", word);
+      }
       let signature = await signWord(word[0], word[1], privateKey);
       wordSet.set(word, {signature, address});
     }

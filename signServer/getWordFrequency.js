@@ -10,20 +10,18 @@ fs.readFile(file, "utf8", function(err, data) {
 
   var wordsArray = splitByWords(data);
   var wordsMap = createWordMap(wordsArray);
-  //writeToFile(wordsMap);
   var finalWordsArray = sortByCount(wordsMap);
   const { wordToInt, intToWord } = getFinalMapping(finalWordsArray);
 
   writeToFile(wordToInt, "./textFiles/WordToIntegers.json");
   writeToFile(intToWord, "./textFiles/IntegersToWords.json");
-
 });
 
 const writeToFile = async (wordHashFile, fileName) => {
   // stringify JSON Object
 
   const jsonContent = JSON.stringify(wordHashFile);
- 
+
   try {
     fs.writeFile(fileName, jsonContent, "utf8", function(err) {
       if (err) {
@@ -47,7 +45,7 @@ function getFinalMapping(array) {
     intToWord[index] = item.name;
   });
 
-return {wordToInt, intToWord};
+  return { wordToInt, intToWord };
 }
 
 function splitByWords(text) {
@@ -63,6 +61,7 @@ function splitByWords(text) {
 function createWordMap(wordsArray) {
   // create map for word counts
   var wordsMap = {};
+  let wordMap = new Map();
   /*
     wordsMap = {
       'Oh': 2,
@@ -70,15 +69,24 @@ function createWordMap(wordsArray) {
       ...
     }
   */
-  wordsArray.forEach(function(key) {
-    if (wordsMap.hasOwnProperty(key.toLowerCase())) {
-      wordsMap[key.toLowerCase()]++;
+  // wordsArray.forEach(function(key) {
+  //   if (wordsMap.hasOwnProperty(key.toLowerCase())) {
+  //     wordsMap[key.toLowerCase()]++;
+  //   } else {
+  //     wordsMap[key.toLowerCase()] = 1;
+  //   }
+  // });
+
+  wordsArray.forEach(word => {
+    let lowerCaseWord = word.toLowerCase();
+    if (wordMap.has(lowerCaseWord)) {
+      wordMap.set(lowerCaseWord, wordMap.get(lowerCaseWord) + 1);
     } else {
-      wordsMap[key.toLowerCase()] = 1;
+      wordMap.set(lowerCaseWord, 1);
     }
   });
-
-  return wordsMap;
+console.log(wordMap.get("construct"));
+  return wordMap;
 }
 
 function sortByCount(wordsMap) {
