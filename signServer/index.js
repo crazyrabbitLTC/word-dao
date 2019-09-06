@@ -1,16 +1,10 @@
 const { createReadStream } = require("fs");
 const fs = require("fs");
 const { createInterface } = require("readline");
+const { setIndexOfWords } = require("./utils/utils.js");
 const EthCrypto = require("eth-crypto");
-const signerIdentity = EthCrypto.createIdentity();
-console.log("Signer Identity: ", signerIdentity);
-//console.log("PROCESS ARGUMENTS: ", process.argv[2]);
-if (process.argv.length < 3) {
-  console.log("You forgot your priv key");
-}
-
-const privateKey = process.argv[2];
-const publicKey = EthCrypto.publicKeyByPrivateKey(privateKey);
+const identity = EthCrypto.createIdentity();
+const publicKey = EthCrypto.publicKeyByPrivateKey(identity.privateKey);
 const address = EthCrypto.publicKey.toAddress(publicKey);
 
 const path = require("path");
@@ -121,65 +115,19 @@ const writeToFile = async wordHashFile => {
   }
 };
 
-const setIndexOfWords = async (wordSet, wordToIntegers, integerToWords) => {
-  let wordSortedToInt = new Map();
-  let intSortedToWords = new Map();
-  let unsortedWordSet = new Set();
-
-  //create a new array
-  let a = [];
-
-  //fill the array with values from 0->wordSet.length
-  for (let i = 0; i < wordSet.size; i++) {
-    a.push(i);
-  }
-
-  //Now we convert  this array to a set.
-  let indexSet = new Set(a);
-
-  //Now we iterate through the Word Set, deleting the integers from our indexSet.
-  for (let word of wordSet) {
-    if (wordToIntegers[word]) {
-      wordSortedToInt.set(word, wordToIntegers[word]);
-      intSortedToWords.set(wordToIntegers[word], word);
-      indexSet.delete(wordToIntegers[word]);
-    } else {
-      unsortedWordSet.add(word);
-    }
-  }
-
-  //Convert IndexSet to Array
-  let indexSetArray = Array.from(indexSet);
-
-  //Iterate through unsorted wordSet, giving  them random indexes
-  for (let word of unsortedWordSet) {
-    //randomly pick a number
-    let rand = Math.floor(Math.random() * indexSetArray.length);
-    //Find the index at that position in the indexSetArray
-    wordSortedToInt.set(word, indexSetArray[rand]);
-    intSortedToWords.set(indexSetArray[rand], word);
-    //delete it from the  indexSetArray
-    indexSetArray.splice(rand,1);
-    unsortedWordSet.delete(word);
-  }
-
-  console.log("Length of word wordSortedToInt: ", wordSortedToInt.size);
-  console.log("Length of integerToWords: ", intSortedToWords.size);
-  console.log("length of unsortedWordSet: ", unsortedWordSet.size);
-  console.log("Totla Length of the Wordset: ", wordSet.size);
-  console.log(
-    "Total of the sorted words plus unsorted: ",
-    wordSortedToInt.size + unsortedWordSet.size
-  );
-  console.log(wordSortedToInt);
-};
 const app = async () => {
   const wordSet = await processFile(file);
-  const orderedMap = await setIndexOfWords(
+  const { wordSortedToInt, intSortedToWords } = await setIndexOfWords(
     wordSet,
     wordToIntegers,
     integerToWords
   );
+
+  console.log("Length of word wordSortedToInt: ", wordSortedToInt.size);
+  console.log("Length of integerToWords: ", intSortedToWords.size);
+  for (let i = 0; i < 20; i++) {
+    console.log(integerToWords[i]);
+  }
 
   //const arrayOfSignedWords = await signLibrary(wordSet);
   //await writeToFile(arrayOfSignedWords);

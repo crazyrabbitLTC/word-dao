@@ -89,3 +89,6 @@ typings/
 .zos.session
 
 .openzeppelin/.session
+
+#text files of words
+signServer/textFiles
