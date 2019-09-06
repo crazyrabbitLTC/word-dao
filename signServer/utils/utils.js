@@ -1,3 +1,6 @@
+const EthCrypto = require("eth-crypto");
+const web3Utils = require("web3-utils");
+
 const setIndexOfWords = async (wordSet, wordToIntegers, integerToWords) => {
   let wordSortedToInt = new Map();
   let intSortedToWords = new Map();
@@ -42,4 +45,41 @@ const setIndexOfWords = async (wordSet, wordToIntegers, integerToWords) => {
   return { wordSortedToInt, intSortedToWords };
 };
 
-module.exports = { setIndexOfWords };
+const signWord = async (word, index, privateKey) => {
+
+  try {
+    const message = EthCrypto.hash.keccak256([
+      { type: "string", value: word }, //The Word we are storing
+      { type: "uint256", value: web3Utils.toBN(index) }, //The index of the  word
+      { type: "string[]", value: word.split("")}, //An array of the charecters
+    ]);
+    const signature = await EthCrypto.sign(privateKey, message);
+    return signature;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const signWordSet = async (wordSortedToInt, privateKey, address) => {
+  //output should be 
+  //map: word -> {signature, publicKey}
+  let wordSet = new Map();
+
+  const asyncForEach = async () => {
+    for (let word of wordSortedToInt) {
+      let signature = await signWord(word[0], word[1], privateKey);
+      wordSet.set(word, {signature, address});
+    }
+  };
+
+  const start = async () => {
+    await asyncForEach();
+    console.log("Done");
+  };
+
+  await start();
+
+  return wordSet;
+};
+
+module.exports = { setIndexOfWords, signWord, signWordSet };

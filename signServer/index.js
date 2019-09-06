@@ -1,7 +1,7 @@
 const { createReadStream } = require("fs");
 const fs = require("fs");
 const { createInterface } = require("readline");
-const { setIndexOfWords } = require("./utils/utils.js");
+const { setIndexOfWords, signWordSet } = require("./utils/utils.js");
 const EthCrypto = require("eth-crypto");
 const identity = EthCrypto.createIdentity();
 const publicKey = EthCrypto.publicKeyByPrivateKey(identity.privateKey);
@@ -41,60 +41,7 @@ const processFile = async file => {
   return output;
 };
 
-const signWord = async (word, index) => {
-  try {
-    const message = EthCrypto.hash.keccak256([{ type: "string", value: word }]);
-    const signature = await EthCrypto.sign(privateKey, message);
-    return signature;
-  } catch (error) {
-    console.log(error);
-  }
-};
 
-const signLibrary = async (wordMap, db = {}) => {
-  let hashArray = [];
-  let finishedWordObject = {};
-
-  const wordsByIntMap = new Map();
-  const intByWordsMap = new Map();
-
-  const asyncForEach = async (wordMap, callback, db = {}) => {
-    console.log("wordMap Size: ", wordMap.size);
-    let wordSet = new Set(wordMap);
-    console.log("Created WordSet. Size is: ", wordSet.size);
-
-    for (let word of wordSet) {
-      wordsByIntMap.set(word, wordToIntegers[word]);
-      intByWordsMap.set(wordToIntegers[word], word);
-
-      // let signature = await signWord(word, index);
-      // let wordObj = {
-      //   word,
-      //   index,
-      //   signedKey: address,
-      //   signature
-      // };
-      // finishedWordObject[word] = { signedKey: address, signature };
-
-      // console.log({ ...wordObj });
-      // hashArray.push({ ...wordObj });
-    }
-    console.log("WordSet Size: ", wordSet.size);
-    console.log("WordsByIntMap Size: ", wordsByIntMap.size);
-    console.log("IntByWordsMap Size: ", intByWordsMap.size);
-  };
-
-  const start = async (wordMap, callback, db) => {
-    await asyncForEach(wordMap, callback, db);
-    console.log("Done");
-  };
-
-  await start(wordMap, addWordToDB, db);
-  console.log("Really finished");
-  console.log("Public key: ", address);
-  //return hashArray;
-  return finishedWordObject;
-};
 
 const writeToFile = async wordHashFile => {
   // stringify JSON Object
@@ -123,14 +70,9 @@ const app = async () => {
     integerToWords
   );
 
-  console.log("Length of word wordSortedToInt: ", wordSortedToInt.size);
-  console.log("Length of integerToWords: ", intSortedToWords.size);
-  for (let i = 0; i < 20; i++) {
-    console.log(integerToWords[i]);
-  }
+  const signedMap = signWordSet(wordSortedToInt, identity.privateKey, address);
 
-  //const arrayOfSignedWords = await signLibrary(wordSet);
-  //await writeToFile(arrayOfSignedWords);
+  console.log("SignedSet Size: ", signedMap.size);
 };
 
 app();
